@@ -9,7 +9,7 @@ Daria Šok | dsok@foi.hr | 0016136808 | dariasok
 Tea Šokec | tsokec@foi.hr | 0016138160 | tsokec
 
 ## Opis domene
-Aplikacija će pružati mogućnost online kupovine slastičarskih proizvoda, njihovom narudžbom. Koristeći aplikaciju, zaposlenik može vidjeti statistiku najpopularnijih kolača. Specifične funkcionalnosti koje će aplikacija nuditi su registracija korisnika, prijava, odabir i kupnja slastičarskih proizvoda, ugovaranje datuma i načina dostave.
+Aplikacija će pružati mogućnost online kupovine slastičarskih proizvoda. Koristeći aplikaciju, zaposlenik može vidjeti statistiku najpopularnijih kolača. Specifične funkcionalnosti koje će aplikacija nuditi su registracija korisnika, prijava, statistika, upravljanje ulogama unutar sustava, kreiranje i ispis izvješća te pregled zaprimljenih narudžbi.
 
 ## Specifikacija projekta
 
