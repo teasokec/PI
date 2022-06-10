@@ -1,0 +1,14 @@
+C:\Users\teaso\Desktop\Fakultet\8. semestar\Programsko inženjerstvo\projekt\Aplikacija\NaruciISjedi\NaruciISjedi\bin\Debug\NaruciISjedi.exe.config
+C:\Users\teaso\Desktop\Fakultet\8. semestar\Programsko inženjerstvo\projekt\Aplikacija\NaruciISjedi\NaruciISjedi\bin\Debug\NaruciISjedi.exe
+C:\Users\teaso\Desktop\Fakultet\8. semestar\Programsko inženjerstvo\projekt\Aplikacija\NaruciISjedi\NaruciISjedi\bin\Debug\NaruciISjedi.pdb
+C:\Users\teaso\Desktop\Fakultet\8. semestar\Programsko inženjerstvo\projekt\Aplikacija\NaruciISjedi\NaruciISjedi\obj\Debug\NaruciISjedi.csproj.AssemblyReference.cache
+C:\Users\teaso\Desktop\Fakultet\8. semestar\Programsko inženjerstvo\projekt\Aplikacija\NaruciISjedi\NaruciISjedi\obj\Debug\NaruciISjedi.csproj.SuggestedBindingRedirects.cache
+C:\Users\teaso\Desktop\Fakultet\8. semestar\Programsko inženjerstvo\projekt\Aplikacija\NaruciISjedi\NaruciISjedi\obj\Debug\NaruciISjedi.PocetnaForma.resources
+C:\Users\teaso\Desktop\Fakultet\8. semestar\Programsko inženjerstvo\projekt\Aplikacija\NaruciISjedi\NaruciISjedi\obj\Debug\NaruciISjedi.Properties.Resources.resources
+C:\Users\teaso\Desktop\Fakultet\8. semestar\Programsko inženjerstvo\projekt\Aplikacija\NaruciISjedi\NaruciISjedi\obj\Debug\NaruciISjedi.csproj.GenerateResource.cache
+C:\Users\teaso\Desktop\Fakultet\8. semestar\Programsko inženjerstvo\projekt\Aplikacija\NaruciISjedi\NaruciISjedi\obj\Debug\NaruciISjedi.csproj.CoreCompileInputs.cache
+C:\Users\teaso\Desktop\Fakultet\8. semestar\Programsko inženjerstvo\projekt\Aplikacija\NaruciISjedi\NaruciISjedi\obj\Debug\NaruciISjedi.exe
+C:\Users\teaso\Desktop\Fakultet\8. semestar\Programsko inženjerstvo\projekt\Aplikacija\NaruciISjedi\NaruciISjedi\obj\Debug\NaruciISjedi.pdb
+C:\Users\teaso\Desktop\Fakultet\8. semestar\Programsko inženjerstvo\projekt\Aplikacija\NaruciISjedi\NaruciISjedi\obj\Debug\NaruciISjedi.LoginForm.resources
+C:\Users\teaso\Desktop\Fakultet\8. semestar\Programsko inženjerstvo\projekt\Aplikacija\NaruciISjedi\NaruciISjedi\obj\Debug\NaruciISjedi.RegistracijaForm.resources
+C:\Users\teaso\Desktop\Fakultet\8. semestar\Programsko inženjerstvo\projekt\Aplikacija\NaruciISjedi\NaruciISjedi\obj\Debug\NaruciISjedi.DodajForm.resources
