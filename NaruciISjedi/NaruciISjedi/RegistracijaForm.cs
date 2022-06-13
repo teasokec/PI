@@ -16,5 +16,10 @@ namespace NaruciISjedi
         {
             InitializeComponent();
         }
+
+        private void btnOdustani_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

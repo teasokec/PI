@@ -32,6 +32,7 @@
             this.btnRegistracija = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.pbBackground = new System.Windows.Forms.PictureBox();
+            this.btnPregled = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pbBackground)).BeginInit();
             this.SuspendLayout();
             // 
@@ -70,18 +71,30 @@
             // 
             // pbBackground
             // 
+            this.pbBackground.BackgroundImage = global::NaruciISjedi.Properties.Resources._256x256bb;
             this.pbBackground.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pbBackground.Location = new System.Drawing.Point(0, 0);
             this.pbBackground.Name = "pbBackground";
-            this.pbBackground.Size = new System.Drawing.Size(505, 343);
+            this.pbBackground.Size = new System.Drawing.Size(505, 393);
             this.pbBackground.TabIndex = 2;
             this.pbBackground.TabStop = false;
+            // 
+            // btnPregled
+            // 
+            this.btnPregled.Font = new System.Drawing.Font("MS Gothic", 15.75F);
+            this.btnPregled.Location = new System.Drawing.Point(157, 296);
+            this.btnPregled.Name = "btnPregled";
+            this.btnPregled.Size = new System.Drawing.Size(179, 50);
+            this.btnPregled.TabIndex = 4;
+            this.btnPregled.Text = "Pregled asortimana";
+            this.btnPregled.UseVisualStyleBackColor = true;
             // 
             // PocetnaForma
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(505, 343);
+            this.ClientSize = new System.Drawing.Size(505, 393);
+            this.Controls.Add(this.btnPregled);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnRegistracija);
             this.Controls.Add(this.btnPrijava);
@@ -100,6 +113,7 @@
         private System.Windows.Forms.Button btnRegistracija;
         private System.Windows.Forms.PictureBox pbBackground;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnPregled;
     }
 }
 

@@ -35,6 +35,7 @@
             this.tbKorIme = new System.Windows.Forms.TextBox();
             this.tbLozinka = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -57,6 +58,7 @@
             this.btnOdustani.TabIndex = 2;
             this.btnOdustani.Text = "Odustani";
             this.btnOdustani.UseVisualStyleBackColor = true;
+            this.btnOdustani.Click += new System.EventHandler(this.btnOdustani_Click);
             // 
             // label1
             // 
@@ -105,11 +107,23 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("MS PGothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label3.Location = new System.Drawing.Point(119, 32);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(76, 21);
+            this.label3.TabIndex = 7;
+            this.label3.Text = "Prijava";
+            // 
             // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 11F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(319, 347);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.tbLozinka);
             this.Controls.Add(this.tbKorIme);
             this.Controls.Add(this.label2);
@@ -135,5 +149,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox tbKorIme;
         private System.Windows.Forms.TextBox tbLozinka;
+        private System.Windows.Forms.Label label3;
     }
 }
