@@ -64,6 +64,12 @@
     <Compile Include="IspisIzvjescaForma.Designer.cs">
       <DependentUpon>IspisIzvjescaForma.cs</DependentUpon>
     </Compile>
+    <Compile Include="IzradaIzvjescaForma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IzradaIzvjescaForma.Designer.cs">
+      <DependentUpon>IzradaIzvjescaForma.cs</DependentUpon>
+    </Compile>
     <Compile Include="KosaricaForma.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -80,6 +86,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="IspisIzvjescaForma.resx">
       <DependentUpon>IspisIzvjescaForma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IzradaIzvjescaForma.resx">
+      <DependentUpon>IzradaIzvjescaForma.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="KosaricaForma.resx">
       <DependentUpon>KosaricaForma.cs</DependentUpon>
