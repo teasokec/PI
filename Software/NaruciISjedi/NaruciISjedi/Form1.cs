@@ -10,11 +10,23 @@ using System.Windows.Forms;
 
 namespace NaruciISjedi
 {
-    public partial class Form1 : Form
+    public partial class PocetnaForma : Form
     {
-        public Form1()
+        public PocetnaForma()
         {
             InitializeComponent();
+        }
+
+        private void prijaviButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void asortimanButton_Click(object sender, EventArgs e)
+        {
+            AsortimanForma forma = new AsortimanForma();
+            forma.Show();
+
         }
     }
 }
