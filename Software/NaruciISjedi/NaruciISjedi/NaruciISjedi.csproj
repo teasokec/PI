@@ -120,6 +120,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RegistracijaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegistracijaForm.Designer.cs">
+      <DependentUpon>RegistracijaForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Report.cs">
       <DependentUpon>NaruciISjediModel.tt</DependentUpon>
     </Compile>
@@ -162,6 +168,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="RegistracijaForm.resx">
+      <DependentUpon>RegistracijaForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EntityDeploy Include="NaruciISjediModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>NaruciISjediModel.Designer.cs</LastGenOutput>
