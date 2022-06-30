@@ -103,6 +103,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::NaruciISjedi.Properties.Resources.cookies_dessert_sweet_dessert_wallpaper_preview;
             this.ClientSize = new System.Drawing.Size(414, 382);
             this.Controls.Add(this.vratiAsortimanButton);
             this.Controls.Add(this.registracijaButton);

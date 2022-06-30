@@ -50,7 +50,7 @@
             // 
             // prikaziIzvjesceButton
             // 
-            this.prikaziIzvjesceButton.Location = new System.Drawing.Point(668, 379);
+            this.prikaziIzvjesceButton.Location = new System.Drawing.Point(423, 379);
             this.prikaziIzvjesceButton.Name = "prikaziIzvjesceButton";
             this.prikaziIzvjesceButton.Size = new System.Drawing.Size(112, 51);
             this.prikaziIzvjesceButton.TabIndex = 5;
@@ -61,7 +61,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackgroundImage = global::NaruciISjedi.Properties.Resources.cookies_dessert_sweet_dessert_wallpaper_preview;
+            this.ClientSize = new System.Drawing.Size(724, 450);
             this.Controls.Add(this.vratiAsortimanButton);
             this.Controls.Add(this.datumMonthCalendar);
             this.Controls.Add(this.prikaziIzvjesceButton);

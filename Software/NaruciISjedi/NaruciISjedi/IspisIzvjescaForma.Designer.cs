@@ -54,7 +54,7 @@
             // 
             // ispisiIzvjesceButton
             // 
-            this.ispisiIzvjesceButton.Location = new System.Drawing.Point(676, 200);
+            this.ispisiIzvjesceButton.Location = new System.Drawing.Point(601, 200);
             this.ispisiIzvjesceButton.Name = "ispisiIzvjesceButton";
             this.ispisiIzvjesceButton.Size = new System.Drawing.Size(112, 51);
             this.ispisiIzvjesceButton.TabIndex = 6;
@@ -74,7 +74,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackgroundImage = global::NaruciISjedi.Properties.Resources.cookies_dessert_sweet_dessert_wallpaper_preview;
+            this.ClientSize = new System.Drawing.Size(725, 450);
             this.Controls.Add(this.vratiAsortimanButton);
             this.Controls.Add(this.ispisiSlikovnoButton);
             this.Controls.Add(this.ispisiIzvjesceButton);

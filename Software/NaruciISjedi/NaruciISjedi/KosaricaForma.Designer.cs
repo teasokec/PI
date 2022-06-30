@@ -39,7 +39,7 @@
             // 
             // potvrdaNarudzbeButton
             // 
-            this.potvrdaNarudzbeButton.Location = new System.Drawing.Point(654, 403);
+            this.potvrdaNarudzbeButton.Location = new System.Drawing.Point(654, 381);
             this.potvrdaNarudzbeButton.Name = "potvrdaNarudzbeButton";
             this.potvrdaNarudzbeButton.Size = new System.Drawing.Size(134, 35);
             this.potvrdaNarudzbeButton.TabIndex = 7;
@@ -48,7 +48,7 @@
             // 
             // vratiAsortimanButton
             // 
-            this.vratiAsortimanButton.Location = new System.Drawing.Point(470, 390);
+            this.vratiAsortimanButton.Location = new System.Drawing.Point(470, 377);
             this.vratiAsortimanButton.Name = "vratiAsortimanButton";
             this.vratiAsortimanButton.Size = new System.Drawing.Size(168, 48);
             this.vratiAsortimanButton.TabIndex = 6;
@@ -58,7 +58,7 @@
             // kosaricaDataGridView
             // 
             this.kosaricaDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.kosaricaDataGridView.Location = new System.Drawing.Point(12, 32);
+            this.kosaricaDataGridView.Location = new System.Drawing.Point(12, 12);
             this.kosaricaDataGridView.Name = "kosaricaDataGridView";
             this.kosaricaDataGridView.RowHeadersWidth = 51;
             this.kosaricaDataGridView.RowTemplate.Height = 24;
@@ -85,6 +85,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::NaruciISjedi.Properties.Resources.cookies_dessert_sweet_dessert_wallpaper_preview;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.cijenaTextBox);
             this.Controls.Add(this.label1);

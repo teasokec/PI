@@ -54,10 +54,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::NaruciISjedi.Properties.Resources.cookies_dessert_sweet_dessert_wallpaper_preview;
             this.ClientSize = new System.Drawing.Size(354, 229);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.okButton);
             this.Name = "NeuspjesnaPrijavaForma";
+            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show;
             this.Text = "NeuspjesnaPrijavaForma";
             this.Load += new System.EventHandler(this.NeuspjesnaPrijavaForma_Load);
             this.ResumeLayout(false);
