@@ -12,3 +12,9 @@ C:\Users\teaso\Desktop\Fakultet\8. semestar\Programsko inženjerstvo\projekt\Apl
 C:\Users\teaso\Desktop\Fakultet\8. semestar\Programsko inženjerstvo\projekt\Aplikacija\NaruciISjedi\NaruciISjedi\obj\Debug\NaruciISjedi.LoginForm.resources
 C:\Users\teaso\Desktop\Fakultet\8. semestar\Programsko inženjerstvo\projekt\Aplikacija\NaruciISjedi\NaruciISjedi\obj\Debug\NaruciISjedi.RegistracijaForm.resources
 C:\Users\teaso\Desktop\Fakultet\8. semestar\Programsko inženjerstvo\projekt\Aplikacija\NaruciISjedi\NaruciISjedi\obj\Debug\NaruciISjedi.DodajForm.resources
+C:\Users\teaso\Desktop\Fakultet\8. semestar\Programsko inženjerstvo\projekt\Aplikacija\NaruciISjedi\NaruciISjedi\bin\Debug\EntityFramework.dll
+C:\Users\teaso\Desktop\Fakultet\8. semestar\Programsko inženjerstvo\projekt\Aplikacija\NaruciISjedi\NaruciISjedi\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\teaso\Desktop\Fakultet\8. semestar\Programsko inženjerstvo\projekt\Aplikacija\NaruciISjedi\NaruciISjedi\bin\Debug\EntityFramework.xml
+C:\Users\teaso\Desktop\Fakultet\8. semestar\Programsko inženjerstvo\projekt\Aplikacija\NaruciISjedi\NaruciISjedi\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\teaso\Desktop\Fakultet\8. semestar\Programsko inženjerstvo\projekt\Aplikacija\NaruciISjedi\NaruciISjedi\obj\Debug\NaruciISjedi.PregledAsortimana.resources
+C:\Users\teaso\Desktop\Fakultet\8. semestar\Programsko inženjerstvo\projekt\Aplikacija\NaruciISjedi\NaruciISjedi\obj\Debug\NaruciISjedi.csproj.CopyComplete

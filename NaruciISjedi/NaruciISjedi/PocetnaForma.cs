@@ -32,5 +32,13 @@ namespace NaruciISjedi
             registracijaForm.ShowDialog();
             this.Show();
         }
+
+        private void btnPregled_Click(object sender, EventArgs e)
+        {
+            PregledAsortimana pregledAsortimana = new PregledAsortimana();
+            this.Hide();
+            pregledAsortimana.ShowDialog();
+            this.Show();
+        }
     }
 }

@@ -13,10 +13,10 @@ namespace NaruciISjedi
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class PI2241_DBEntities : DbContext
+    public partial class PI2241_DBEntities1 : DbContext
     {
-        public PI2241_DBEntities()
-            : base("name=PI2241_DBEntities")
+        public PI2241_DBEntities1()
+            : base("name=PI2241_DBEntities1")
         {
         }
     

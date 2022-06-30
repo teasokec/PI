@@ -27,7 +27,7 @@
           <Property Name="naziv" Type="varchar" MaxLength="50" />
           <Property Name="sastojci" Type="text" />
           <Property Name="cijenaProizvoda" Type="float" />
-          <Property Name="slkaProizvoda" Type="varchar" MaxLength="50" />
+          <Property Name="slikaProizvoda" Type="varchar" MaxLength="250" />
         </EntityType>
         <EntityType Name="Report">
           <Key>
@@ -199,7 +199,7 @@
           <Property Name="naziv" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="sastojci" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
           <Property Name="cijenaProizvoda" Type="Double" />
-          <Property Name="slkaProizvoda" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="slikaProizvoda" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="Orders" Relationship="Self.FK_Order_Product" FromRole="Product" ToRole="Order" />
           <NavigationProperty Name="Type" Relationship="Self.FK_Product_Type" FromRole="Product" ToRole="Type" />
         </EntityType>
@@ -318,7 +318,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="PI2241_DBEntities" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="PI2241_DBEntities1" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Orders" EntityType="Self.Order" />
           <EntitySet Name="Products" EntityType="Self.Product" />
           <EntitySet Name="Reports" EntityType="Self.Report" />
@@ -355,7 +355,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="PI2241_DBModelStoreContainer" CdmEntityContainer="PI2241_DBEntities">
+        <EntityContainerMapping StorageEntityContainer="PI2241_DBModelStoreContainer" CdmEntityContainer="PI2241_DBEntities1">
           <EntitySetMapping Name="Orders">
             <EntityTypeMapping TypeName="PI2241_DBModel.Order">
               <MappingFragment StoreEntitySet="Order">
@@ -378,7 +378,7 @@
                 <ScalarProperty Name="naziv" ColumnName="naziv" />
                 <ScalarProperty Name="sastojci" ColumnName="sastojci" />
                 <ScalarProperty Name="cijenaProizvoda" ColumnName="cijenaProizvoda" />
-                <ScalarProperty Name="slkaProizvoda" ColumnName="slkaProizvoda" />
+                <ScalarProperty Name="slikaProizvoda" ColumnName="slikaProizvoda" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

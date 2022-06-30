@@ -88,6 +88,7 @@
             this.btnPregled.TabIndex = 4;
             this.btnPregled.Text = "Pregled asortimana";
             this.btnPregled.UseVisualStyleBackColor = true;
+            this.btnPregled.Click += new System.EventHandler(this.btnPregled_Click);
             // 
             // PocetnaForma
             // 

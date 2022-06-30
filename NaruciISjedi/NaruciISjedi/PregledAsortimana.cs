@@ -21,15 +21,44 @@ namespace NaruciISjedi
         {
             this.Validate();
             this.productBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.pI2241_DBDataSet);
-
         }
 
         private void PregledAsortimana_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'pI2241_DBDataSet.Product' table. You can move, or remove it, as needed.
-            this.productTableAdapter.Fill(this.pI2241_DBDataSet.Product);
+            using (var context = new PI2241_DBEntities1())
+            {
+                var query = from p in context.Products.Include("Orders").Include("Type")
+                            select p;
 
+                dgvProducts.DataSource = query.ToList();
+                dgvProducts.Columns["Orders"].Visible = false;
+                dgvProducts.Columns["Type"].Visible = false;
+                btnAzuriraj.Enabled = false;
+                btnDodaj.Enabled = false;
+                btnObrisi.Enabled = false;
+                
+            }
+        }
+
+        private void btnDodaj_Click(object sender, EventArgs e)
+        {
+            DodajForm dodajForm = new DodajForm();
+            this.Hide();
+            dodajForm.ShowDialog();
+            this.Show();
+        }
+
+        private void tbUnos_TextChanged(object sender, EventArgs e)
+        {
+            string unos = tbUnos.Text;
+            using (var context = new PI2241_DBEntities1())
+            {
+                var query = from p in context.Products
+                            where p.naziv.Contains(unos)
+                            select p;
+
+                dgvProducts.DataSource = query.ToList();
+            }
         }
     }
 }

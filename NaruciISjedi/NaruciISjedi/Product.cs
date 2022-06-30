@@ -25,7 +25,7 @@ namespace NaruciISjedi
         public string naziv { get; set; }
         public string sastojci { get; set; }
         public Nullable<double> cijenaProizvoda { get; set; }
-        public string slkaProizvoda { get; set; }
+        public string slikaProizvoda { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Order> Orders { get; set; }
