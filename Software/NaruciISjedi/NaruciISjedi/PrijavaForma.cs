@@ -27,5 +27,11 @@ namespace NaruciISjedi
             NeuspjesnaPrijavaForma form = new NeuspjesnaPrijavaForma();
             form.Show();
         }
+
+        private void vratiAsortimanButton_Click(object sender, EventArgs e)
+        {
+            AsortimanForma form = new AsortimanForma();
+            form.Show();
+        }
     }
 }

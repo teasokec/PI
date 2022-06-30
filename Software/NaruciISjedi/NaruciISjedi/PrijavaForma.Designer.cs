@@ -34,6 +34,7 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.registracijaButton = new System.Windows.Forms.Button();
+            this.vratiAsortimanButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // prijavaButton
@@ -88,11 +89,22 @@
             this.registracijaButton.UseVisualStyleBackColor = true;
             this.registracijaButton.Click += new System.EventHandler(this.registracijaButton_Click);
             // 
+            // vratiAsortimanButton
+            // 
+            this.vratiAsortimanButton.Location = new System.Drawing.Point(241, 235);
+            this.vratiAsortimanButton.Name = "vratiAsortimanButton";
+            this.vratiAsortimanButton.Size = new System.Drawing.Size(118, 52);
+            this.vratiAsortimanButton.TabIndex = 15;
+            this.vratiAsortimanButton.Text = "Pregled asortimana";
+            this.vratiAsortimanButton.UseVisualStyleBackColor = true;
+            this.vratiAsortimanButton.Click += new System.EventHandler(this.vratiAsortimanButton_Click);
+            // 
             // PrijavaForma
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(414, 382);
+            this.Controls.Add(this.vratiAsortimanButton);
             this.Controls.Add(this.registracijaButton);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
@@ -114,5 +126,6 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Button registracijaButton;
+        private System.Windows.Forms.Button vratiAsortimanButton;
     }
 }
