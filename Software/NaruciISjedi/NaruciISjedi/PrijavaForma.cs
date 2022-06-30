@@ -10,23 +10,22 @@ using System.Windows.Forms;
 
 namespace NaruciISjedi
 {
-    public partial class PocetnaForma : Form
+    public partial class PrijavaForma : Form
     {
-        public PocetnaForma()
+        public PrijavaForma()
         {
             InitializeComponent();
         }
 
-        private void prijaviButton_Click(object sender, EventArgs e)
+        private void registracijaButton_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void asortimanButton_Click(object sender, EventArgs e)
+        private void prijavaButton_Click(object sender, EventArgs e)
         {
-            AsortimanForma forma = new AsortimanForma();
-            forma.Show();
-
+            NeuspjesnaPrijavaForma form = new NeuspjesnaPrijavaForma();
+            form.Show();
         }
     }
 }

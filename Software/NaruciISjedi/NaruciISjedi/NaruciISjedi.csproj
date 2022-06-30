@@ -61,11 +61,11 @@
     <Compile Include="AsortimanForma.Designer.cs">
       <DependentUpon>AsortimanForma.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form1.cs">
+    <Compile Include="PocetnaForma.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="PocetnaForma.Designer.cs">
+      <DependentUpon>PocetnaForma.cs</DependentUpon>
     </Compile>
     <Compile Include="IspisIzvjescaForma.cs">
       <SubType>Form</SubType>
@@ -109,6 +109,12 @@
     <Compile Include="Order.cs">
       <DependentUpon>NaruciISjediModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="PrijavaForma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PrijavaForma.Designer.cs">
+      <DependentUpon>PrijavaForma.cs</DependentUpon>
+    </Compile>
     <Compile Include="Product.cs">
       <DependentUpon>NaruciISjediModel.tt</DependentUpon>
     </Compile>
@@ -129,8 +135,8 @@
     <EmbeddedResource Include="AsortimanForma.resx">
       <DependentUpon>AsortimanForma.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="PocetnaForma.resx">
+      <DependentUpon>PocetnaForma.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="IspisIzvjescaForma.resx">
       <DependentUpon>IspisIzvjescaForma.cs</DependentUpon>
@@ -143,6 +149,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="NeuspjesnaPrijavaForma.resx">
       <DependentUpon>NeuspjesnaPrijavaForma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrijavaForma.resx">
+      <DependentUpon>PrijavaForma.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
