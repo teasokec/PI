@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace NaruciISjedi
 {
-    public partial class Form1 : Form
+    public partial class IzradaIzvjescaForma : Form
     {
-        public Form1()
+        public IzradaIzvjescaForma()
         {
             InitializeComponent();
         }
