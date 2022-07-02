@@ -28,30 +28,30 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.prijavaButton = new System.Windows.Forms.Button();
+            this.btnPrijava = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.registracijaButton = new System.Windows.Forms.Button();
-            this.vratiAsortimanButton = new System.Windows.Forms.Button();
+            this.tbKorIme = new System.Windows.Forms.TextBox();
+            this.tbLozinka = new System.Windows.Forms.TextBox();
+            this.btnRegistracija = new System.Windows.Forms.Button();
+            this.btnOdustani = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // prijavaButton
+            // btnPrijava
             // 
-            this.prijavaButton.Location = new System.Drawing.Point(89, 165);
-            this.prijavaButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.prijavaButton.Name = "prijavaButton";
-            this.prijavaButton.Size = new System.Drawing.Size(69, 31);
-            this.prijavaButton.TabIndex = 0;
-            this.prijavaButton.Text = "Prijavi se";
-            this.prijavaButton.UseVisualStyleBackColor = true;
-            this.prijavaButton.Click += new System.EventHandler(this.prijavaButton_Click);
+            this.btnPrijava.Location = new System.Drawing.Point(30, 164);
+            this.btnPrijava.Margin = new System.Windows.Forms.Padding(2);
+            this.btnPrijava.Name = "btnPrijava";
+            this.btnPrijava.Size = new System.Drawing.Size(74, 31);
+            this.btnPrijava.TabIndex = 0;
+            this.btnPrijava.Text = "Prijavi se";
+            this.btnPrijava.UseVisualStyleBackColor = true;
+            this.btnPrijava.Click += new System.EventHandler(this.btnPrijava_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(48, 63);
+            this.label1.Location = new System.Drawing.Point(70, 63);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(81, 13);
@@ -61,50 +61,50 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(48, 110);
+            this.label2.Location = new System.Drawing.Point(70, 110);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(47, 13);
             this.label2.TabIndex = 2;
             this.label2.Text = "Lozinka:";
             // 
-            // textBox1
+            // tbKorIme
             // 
-            this.textBox1.Location = new System.Drawing.Point(124, 57);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(76, 20);
-            this.textBox1.TabIndex = 3;
+            this.tbKorIme.Location = new System.Drawing.Point(146, 57);
+            this.tbKorIme.Margin = new System.Windows.Forms.Padding(2);
+            this.tbKorIme.Name = "tbKorIme";
+            this.tbKorIme.Size = new System.Drawing.Size(76, 20);
+            this.tbKorIme.TabIndex = 3;
             // 
-            // textBox2
+            // tbLozinka
             // 
-            this.textBox2.Location = new System.Drawing.Point(124, 108);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(76, 20);
-            this.textBox2.TabIndex = 4;
+            this.tbLozinka.Location = new System.Drawing.Point(146, 108);
+            this.tbLozinka.Margin = new System.Windows.Forms.Padding(2);
+            this.tbLozinka.Name = "tbLozinka";
+            this.tbLozinka.Size = new System.Drawing.Size(76, 20);
+            this.tbLozinka.TabIndex = 4;
             // 
-            // registracijaButton
+            // btnRegistracija
             // 
-            this.registracijaButton.Location = new System.Drawing.Point(89, 224);
-            this.registracijaButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.registracijaButton.Name = "registracijaButton";
-            this.registracijaButton.Size = new System.Drawing.Size(74, 37);
-            this.registracijaButton.TabIndex = 5;
-            this.registracijaButton.Text = "Registracija";
-            this.registracijaButton.UseVisualStyleBackColor = true;
-            this.registracijaButton.Click += new System.EventHandler(this.registracijaButton_Click);
+            this.btnRegistracija.Location = new System.Drawing.Point(108, 164);
+            this.btnRegistracija.Margin = new System.Windows.Forms.Padding(2);
+            this.btnRegistracija.Name = "btnRegistracija";
+            this.btnRegistracija.Size = new System.Drawing.Size(74, 31);
+            this.btnRegistracija.TabIndex = 5;
+            this.btnRegistracija.Text = "Registracija";
+            this.btnRegistracija.UseVisualStyleBackColor = true;
+            this.btnRegistracija.Click += new System.EventHandler(this.btnRegistracija_Click);
             // 
-            // vratiAsortimanButton
+            // btnOdustani
             // 
-            this.vratiAsortimanButton.Location = new System.Drawing.Point(181, 191);
-            this.vratiAsortimanButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.vratiAsortimanButton.Name = "vratiAsortimanButton";
-            this.vratiAsortimanButton.Size = new System.Drawing.Size(88, 42);
-            this.vratiAsortimanButton.TabIndex = 15;
-            this.vratiAsortimanButton.Text = "Pregled asortimana";
-            this.vratiAsortimanButton.UseVisualStyleBackColor = true;
-            this.vratiAsortimanButton.Click += new System.EventHandler(this.vratiAsortimanButton_Click);
+            this.btnOdustani.Location = new System.Drawing.Point(186, 164);
+            this.btnOdustani.Margin = new System.Windows.Forms.Padding(2);
+            this.btnOdustani.Name = "btnOdustani";
+            this.btnOdustani.Size = new System.Drawing.Size(74, 31);
+            this.btnOdustani.TabIndex = 6;
+            this.btnOdustani.Text = "Odustani";
+            this.btnOdustani.UseVisualStyleBackColor = true;
+            this.btnOdustani.Click += new System.EventHandler(this.btnOdustani_Click);
             // 
             // PrijavaForma
             // 
@@ -112,14 +112,14 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::NaruciISjedi.Properties.Resources._256x256bb;
             this.ClientSize = new System.Drawing.Size(310, 310);
-            this.Controls.Add(this.vratiAsortimanButton);
-            this.Controls.Add(this.registracijaButton);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.btnOdustani);
+            this.Controls.Add(this.btnRegistracija);
+            this.Controls.Add(this.tbLozinka);
+            this.Controls.Add(this.tbKorIme);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.prijavaButton);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Controls.Add(this.btnPrijava);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "PrijavaForma";
             this.Text = "Prijava";
             this.ResumeLayout(false);
@@ -129,12 +129,12 @@
 
         #endregion
 
-        private System.Windows.Forms.Button prijavaButton;
+        private System.Windows.Forms.Button btnPrijava;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Button registracijaButton;
-        private System.Windows.Forms.Button vratiAsortimanButton;
+        private System.Windows.Forms.TextBox tbKorIme;
+        private System.Windows.Forms.TextBox tbLozinka;
+        private System.Windows.Forms.Button btnRegistracija;
+        private System.Windows.Forms.Button btnOdustani;
     }
 }
