@@ -20,14 +20,22 @@ namespace NaruciISjedi
         private void prijaviButton_Click(object sender, EventArgs e)
         {
             PrijavaForma form = new PrijavaForma();
-            form.Show();
+            this.Hide();
+            form.ShowDialog();
         }
 
         private void asortimanButton_Click(object sender, EventArgs e)
         {
             AsortimanForma forma = new AsortimanForma();
-            forma.Show();
+            this.Hide();
+            forma.ShowDialog();
+        }
 
+        private void registracijaButton_Click(object sender, EventArgs e)
+        {
+            RegistracijaForm form = new RegistracijaForm();
+            this.Hide();
+            form.ShowDialog();
         }
     }
 }
