@@ -29,41 +29,43 @@
         private void InitializeComponent()
         {
             this.kosaricaButton = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvProizvodi = new System.Windows.Forms.DataGridView();
             this.kreirajIzvjesceButton = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProizvodi)).BeginInit();
             this.SuspendLayout();
             // 
             // kosaricaButton
             // 
             this.kosaricaButton.Location = new System.Drawing.Point(502, 308);
-            this.kosaricaButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.kosaricaButton.Margin = new System.Windows.Forms.Padding(2);
             this.kosaricaButton.Name = "kosaricaButton";
             this.kosaricaButton.Size = new System.Drawing.Size(84, 41);
             this.kosaricaButton.TabIndex = 5;
             this.kosaricaButton.Text = "Košarica";
             this.kosaricaButton.UseVisualStyleBackColor = true;
+            this.kosaricaButton.Click += new System.EventHandler(this.kosaricaButton_Click);
             // 
-            // dataGridView1
+            // dgvProizvodi
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(14, 10);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(573, 273);
-            this.dataGridView1.TabIndex = 4;
+            this.dgvProizvodi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvProizvodi.Location = new System.Drawing.Point(14, 10);
+            this.dgvProizvodi.Margin = new System.Windows.Forms.Padding(2);
+            this.dgvProizvodi.Name = "dgvProizvodi";
+            this.dgvProizvodi.RowHeadersWidth = 51;
+            this.dgvProizvodi.RowTemplate.Height = 24;
+            this.dgvProizvodi.Size = new System.Drawing.Size(573, 273);
+            this.dgvProizvodi.TabIndex = 4;
             // 
             // kreirajIzvjesceButton
             // 
             this.kreirajIzvjesceButton.Location = new System.Drawing.Point(14, 308);
-            this.kreirajIzvjesceButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.kreirajIzvjesceButton.Margin = new System.Windows.Forms.Padding(2);
             this.kreirajIzvjesceButton.Name = "kreirajIzvjesceButton";
             this.kreirajIzvjesceButton.Size = new System.Drawing.Size(84, 41);
             this.kreirajIzvjesceButton.TabIndex = 3;
             this.kreirajIzvjesceButton.Text = "Kreiraj izvješće";
             this.kreirajIzvjesceButton.UseVisualStyleBackColor = true;
+            this.kreirajIzvjesceButton.Click += new System.EventHandler(this.kreirajIzvjesceButton_Click);
             // 
             // AsortimanForma
             // 
@@ -72,12 +74,13 @@
             this.BackgroundImage = global::NaruciISjedi.Properties.Resources._256x256bb;
             this.ClientSize = new System.Drawing.Size(600, 366);
             this.Controls.Add(this.kosaricaButton);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvProizvodi);
             this.Controls.Add(this.kreirajIzvjesceButton);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "AsortimanForma";
             this.Text = "AsortimanForma";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.AsortimanForma_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProizvodi)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -85,7 +88,7 @@
         #endregion
 
         private System.Windows.Forms.Button kosaricaButton;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvProizvodi;
         private System.Windows.Forms.Button kreirajIzvjesceButton;
     }
 }
