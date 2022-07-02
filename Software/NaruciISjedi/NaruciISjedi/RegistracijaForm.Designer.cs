@@ -40,15 +40,17 @@
             this.adresaTextBox = new System.Windows.Forms.TextBox();
             this.korisnickoImeTextBox = new System.Windows.Forms.TextBox();
             this.lozinkaTextBox = new System.Windows.Forms.TextBox();
-            this.registracijaButton = new System.Windows.Forms.Button();
+            this.btnRegistracija = new System.Windows.Forms.Button();
+            this.btnOdustani = new System.Windows.Forms.Button();
+            this.btnPrijava = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
-            this.vratiAsortimanButton = new System.Windows.Forms.Button();
+            this.cmbUloga = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(10, 11);
+            this.label1.Location = new System.Drawing.Point(52, 38);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(30, 13);
@@ -58,7 +60,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(10, 46);
+            this.label2.Location = new System.Drawing.Point(52, 73);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(50, 13);
@@ -68,7 +70,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(10, 83);
+            this.label3.Location = new System.Drawing.Point(52, 110);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(70, 13);
@@ -78,7 +80,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(12, 116);
+            this.label4.Location = new System.Drawing.Point(54, 143);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(43, 13);
@@ -88,7 +90,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(12, 146);
+            this.label5.Location = new System.Drawing.Point(54, 173);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(78, 13);
@@ -98,7 +100,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(12, 181);
+            this.label6.Location = new System.Drawing.Point(54, 208);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(47, 13);
@@ -107,83 +109,101 @@
             // 
             // imeTextBox
             // 
-            this.imeTextBox.Location = new System.Drawing.Point(130, 11);
-            this.imeTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.imeTextBox.Location = new System.Drawing.Point(156, 38);
+            this.imeTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.imeTextBox.Name = "imeTextBox";
-            this.imeTextBox.Size = new System.Drawing.Size(76, 20);
+            this.imeTextBox.Size = new System.Drawing.Size(150, 20);
             this.imeTextBox.TabIndex = 6;
             // 
             // prezimeTextBox
             // 
-            this.prezimeTextBox.Location = new System.Drawing.Point(130, 46);
-            this.prezimeTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.prezimeTextBox.Location = new System.Drawing.Point(156, 73);
+            this.prezimeTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.prezimeTextBox.Name = "prezimeTextBox";
-            this.prezimeTextBox.Size = new System.Drawing.Size(76, 20);
+            this.prezimeTextBox.Size = new System.Drawing.Size(150, 20);
             this.prezimeTextBox.TabIndex = 7;
             // 
             // kontaktTextBox
             // 
-            this.kontaktTextBox.Location = new System.Drawing.Point(130, 83);
-            this.kontaktTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.kontaktTextBox.Location = new System.Drawing.Point(156, 110);
+            this.kontaktTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.kontaktTextBox.Name = "kontaktTextBox";
-            this.kontaktTextBox.Size = new System.Drawing.Size(76, 20);
+            this.kontaktTextBox.Size = new System.Drawing.Size(150, 20);
             this.kontaktTextBox.TabIndex = 8;
             // 
             // adresaTextBox
             // 
-            this.adresaTextBox.Location = new System.Drawing.Point(130, 114);
-            this.adresaTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.adresaTextBox.Location = new System.Drawing.Point(156, 141);
+            this.adresaTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.adresaTextBox.Name = "adresaTextBox";
-            this.adresaTextBox.Size = new System.Drawing.Size(76, 20);
+            this.adresaTextBox.Size = new System.Drawing.Size(150, 20);
             this.adresaTextBox.TabIndex = 9;
             // 
             // korisnickoImeTextBox
             // 
-            this.korisnickoImeTextBox.Location = new System.Drawing.Point(130, 146);
-            this.korisnickoImeTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.korisnickoImeTextBox.Location = new System.Drawing.Point(156, 173);
+            this.korisnickoImeTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.korisnickoImeTextBox.Name = "korisnickoImeTextBox";
-            this.korisnickoImeTextBox.Size = new System.Drawing.Size(76, 20);
+            this.korisnickoImeTextBox.Size = new System.Drawing.Size(150, 20);
             this.korisnickoImeTextBox.TabIndex = 10;
             // 
             // lozinkaTextBox
             // 
-            this.lozinkaTextBox.Location = new System.Drawing.Point(130, 179);
-            this.lozinkaTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.lozinkaTextBox.Location = new System.Drawing.Point(156, 206);
+            this.lozinkaTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.lozinkaTextBox.Name = "lozinkaTextBox";
-            this.lozinkaTextBox.Size = new System.Drawing.Size(76, 20);
+            this.lozinkaTextBox.Size = new System.Drawing.Size(150, 20);
             this.lozinkaTextBox.TabIndex = 11;
             // 
-            // registracijaButton
+            // btnRegistracija
             // 
-            this.registracijaButton.Location = new System.Drawing.Point(76, 259);
-            this.registracijaButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.registracijaButton.Name = "registracijaButton";
-            this.registracijaButton.Size = new System.Drawing.Size(83, 38);
-            this.registracijaButton.TabIndex = 12;
-            this.registracijaButton.Text = "Registriraj se";
-            this.registracijaButton.UseVisualStyleBackColor = true;
-            this.registracijaButton.Click += new System.EventHandler(this.registracijaButton_Click);
+            this.btnRegistracija.Location = new System.Drawing.Point(49, 287);
+            this.btnRegistracija.Margin = new System.Windows.Forms.Padding(2);
+            this.btnRegistracija.Name = "btnRegistracija";
+            this.btnRegistracija.Size = new System.Drawing.Size(83, 38);
+            this.btnRegistracija.TabIndex = 12;
+            this.btnRegistracija.Text = "Registriraj se";
+            this.btnRegistracija.UseVisualStyleBackColor = true;
+            this.btnRegistracija.Click += new System.EventHandler(this.btnRegistracija_Click);
+            // 
+            // btnOdustani
+            // 
+            this.btnOdustani.Location = new System.Drawing.Point(223, 287);
+            this.btnOdustani.Margin = new System.Windows.Forms.Padding(2);
+            this.btnOdustani.Name = "btnOdustani";
+            this.btnOdustani.Size = new System.Drawing.Size(83, 38);
+            this.btnOdustani.TabIndex = 13;
+            this.btnOdustani.Text = "Odustani";
+            this.btnOdustani.UseVisualStyleBackColor = true;
+            this.btnOdustani.Click += new System.EventHandler(this.btnOdustani_Click);
+            // 
+            // btnPrijava
+            // 
+            this.btnPrijava.Location = new System.Drawing.Point(136, 287);
+            this.btnPrijava.Margin = new System.Windows.Forms.Padding(2);
+            this.btnPrijava.Name = "btnPrijava";
+            this.btnPrijava.Size = new System.Drawing.Size(83, 38);
+            this.btnPrijava.TabIndex = 14;
+            this.btnPrijava.Text = "Prijava";
+            this.btnPrijava.UseVisualStyleBackColor = true;
+            this.btnPrijava.Click += new System.EventHandler(this.btnPrijava_Click);
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(12, 207);
-            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label7.Location = new System.Drawing.Point(54, 248);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(53, 13);
-            this.label7.TabIndex = 13;
-            this.label7.Text = "E-mail???";
+            this.label7.Size = new System.Drawing.Size(38, 13);
+            this.label7.TabIndex = 15;
+            this.label7.Text = "Uloga:";
             // 
-            // vratiAsortimanButton
+            // cmbUloga
             // 
-            this.vratiAsortimanButton.Location = new System.Drawing.Point(181, 256);
-            this.vratiAsortimanButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.vratiAsortimanButton.Name = "vratiAsortimanButton";
-            this.vratiAsortimanButton.Size = new System.Drawing.Size(128, 41);
-            this.vratiAsortimanButton.TabIndex = 14;
-            this.vratiAsortimanButton.Text = "Pregled asortimana";
-            this.vratiAsortimanButton.UseVisualStyleBackColor = true;
-            this.vratiAsortimanButton.Click += new System.EventHandler(this.vratiAsortimanButton_Click);
+            this.cmbUloga.FormattingEnabled = true;
+            this.cmbUloga.Location = new System.Drawing.Point(156, 248);
+            this.cmbUloga.Name = "cmbUloga";
+            this.cmbUloga.Size = new System.Drawing.Size(150, 21);
+            this.cmbUloga.TabIndex = 16;
             // 
             // RegistracijaForm
             // 
@@ -191,9 +211,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::NaruciISjedi.Properties.Resources._256x256bb;
             this.ClientSize = new System.Drawing.Size(343, 347);
-            this.Controls.Add(this.vratiAsortimanButton);
+            this.Controls.Add(this.cmbUloga);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.registracijaButton);
+            this.Controls.Add(this.btnPrijava);
+            this.Controls.Add(this.btnOdustani);
+            this.Controls.Add(this.btnRegistracija);
             this.Controls.Add(this.lozinkaTextBox);
             this.Controls.Add(this.korisnickoImeTextBox);
             this.Controls.Add(this.adresaTextBox);
@@ -206,9 +228,10 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "RegistracijaForm";
             this.Text = "Registracija";
+            this.Load += new System.EventHandler(this.RegistracijaForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -228,8 +251,10 @@
         private System.Windows.Forms.TextBox adresaTextBox;
         private System.Windows.Forms.TextBox korisnickoImeTextBox;
         private System.Windows.Forms.TextBox lozinkaTextBox;
-        private System.Windows.Forms.Button registracijaButton;
+        private System.Windows.Forms.Button btnRegistracija;
+        private System.Windows.Forms.Button btnOdustani;
+        private System.Windows.Forms.Button btnPrijava;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Button vratiAsortimanButton;
+        private System.Windows.Forms.ComboBox cmbUloga;
     }
 }
