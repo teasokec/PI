@@ -35,37 +35,41 @@
             // 
             // vratiAsortimanButton
             // 
-            this.vratiAsortimanButton.Location = new System.Drawing.Point(20, 379);
+            this.vratiAsortimanButton.Location = new System.Drawing.Point(15, 308);
+            this.vratiAsortimanButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.vratiAsortimanButton.Name = "vratiAsortimanButton";
-            this.vratiAsortimanButton.Size = new System.Drawing.Size(170, 51);
+            this.vratiAsortimanButton.Size = new System.Drawing.Size(128, 41);
             this.vratiAsortimanButton.TabIndex = 7;
             this.vratiAsortimanButton.Text = "Vrati se na pregled asortimana";
             this.vratiAsortimanButton.UseVisualStyleBackColor = true;
             // 
             // datumMonthCalendar
             // 
-            this.datumMonthCalendar.Location = new System.Drawing.Point(20, 21);
+            this.datumMonthCalendar.Location = new System.Drawing.Point(15, 17);
+            this.datumMonthCalendar.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
             this.datumMonthCalendar.Name = "datumMonthCalendar";
             this.datumMonthCalendar.TabIndex = 6;
             // 
             // prikaziIzvjesceButton
             // 
-            this.prikaziIzvjesceButton.Location = new System.Drawing.Point(423, 379);
+            this.prikaziIzvjesceButton.Location = new System.Drawing.Point(317, 308);
+            this.prikaziIzvjesceButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.prikaziIzvjesceButton.Name = "prikaziIzvjesceButton";
-            this.prikaziIzvjesceButton.Size = new System.Drawing.Size(112, 51);
+            this.prikaziIzvjesceButton.Size = new System.Drawing.Size(84, 41);
             this.prikaziIzvjesceButton.TabIndex = 5;
             this.prikaziIzvjesceButton.Text = "Prikaži izvješće";
             this.prikaziIzvjesceButton.UseVisualStyleBackColor = true;
             // 
             // IzradaIzvjescaForma
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::NaruciISjedi.Properties.Resources.cookies_dessert_sweet_dessert_wallpaper_preview;
-            this.ClientSize = new System.Drawing.Size(724, 450);
+            this.BackgroundImage = global::NaruciISjedi.Properties.Resources._256x256bb;
+            this.ClientSize = new System.Drawing.Size(543, 366);
             this.Controls.Add(this.vratiAsortimanButton);
             this.Controls.Add(this.datumMonthCalendar);
             this.Controls.Add(this.prikaziIzvjesceButton);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "IzradaIzvjescaForma";
             this.Text = "IzradaIzvjescaForma";
             this.ResumeLayout(false);

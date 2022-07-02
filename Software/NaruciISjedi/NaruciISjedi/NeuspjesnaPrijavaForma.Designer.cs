@@ -34,9 +34,10 @@
             // 
             // okButton
             // 
-            this.okButton.Location = new System.Drawing.Point(139, 122);
+            this.okButton.Location = new System.Drawing.Point(104, 99);
+            this.okButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.okButton.Name = "okButton";
-            this.okButton.Size = new System.Drawing.Size(75, 23);
+            this.okButton.Size = new System.Drawing.Size(56, 19);
             this.okButton.TabIndex = 0;
             this.okButton.Text = "OK!";
             this.okButton.UseVisualStyleBackColor = true;
@@ -44,20 +45,22 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(119, 66);
+            this.label1.Location = new System.Drawing.Point(89, 54);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(127, 16);
+            this.label1.Size = new System.Drawing.Size(100, 13);
             this.label1.TabIndex = 1;
             this.label1.Text = "Nesupješna prijava!";
             // 
             // NeuspjesnaPrijavaForma
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::NaruciISjedi.Properties.Resources.cookies_dessert_sweet_dessert_wallpaper_preview;
-            this.ClientSize = new System.Drawing.Size(354, 229);
+            this.BackgroundImage = global::NaruciISjedi.Properties.Resources._256x256bb;
+            this.ClientSize = new System.Drawing.Size(266, 186);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.okButton);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "NeuspjesnaPrijavaForma";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show;
             this.Text = "NeuspjesnaPrijavaForma";

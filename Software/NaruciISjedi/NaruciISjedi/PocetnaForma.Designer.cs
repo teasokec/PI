@@ -48,7 +48,7 @@
             // prijaviButton
             // 
             this.prijaviButton.Location = new System.Drawing.Point(113, 195);
-            this.prijaviButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.prijaviButton.Margin = new System.Windows.Forms.Padding(2);
             this.prijaviButton.Name = "prijaviButton";
             this.prijaviButton.Size = new System.Drawing.Size(101, 60);
             this.prijaviButton.TabIndex = 1;
@@ -59,7 +59,7 @@
             // asortimanButton
             // 
             this.asortimanButton.Location = new System.Drawing.Point(383, 195);
-            this.asortimanButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.asortimanButton.Margin = new System.Windows.Forms.Padding(2);
             this.asortimanButton.Name = "asortimanButton";
             this.asortimanButton.Size = new System.Drawing.Size(104, 60);
             this.asortimanButton.TabIndex = 2;
@@ -82,13 +82,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::NaruciISjedi.Properties.Resources.cookies_dessert_sweet_dessert_wallpaper_preview;
+            this.BackgroundImage = global::NaruciISjedi.Properties.Resources._256x256bb;
             this.ClientSize = new System.Drawing.Size(600, 366);
             this.Controls.Add(this.registracijaButton);
             this.Controls.Add(this.asortimanButton);
             this.Controls.Add(this.prijaviButton);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "PocetnaForma";
             this.Text = "Glavni Izbornik";
             this.ResumeLayout(false);

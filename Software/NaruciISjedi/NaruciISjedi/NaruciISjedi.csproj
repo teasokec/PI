@@ -204,6 +204,7 @@
       <DependentUpon>NaruciISjediModel.edmx</DependentUpon>
       <LastGenOutput>NaruciISjediModel.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\256x256bb.jpg" />
     <None Include="Resources\cookies-dessert-sweet-dessert-wallpaper-preview.jpg" />
   </ItemGroup>
   <ItemGroup>
