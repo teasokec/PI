@@ -17,21 +17,43 @@ namespace NaruciISjedi
             InitializeComponent();
         }
 
-        private void registracijaButton_Click(object sender, EventArgs e)
+        private void btnOdustani_Click(object sender, EventArgs e)
         {
-
+            PocetnaForma forma = new PocetnaForma();
+            this.Hide();
+            forma.ShowDialog();
         }
 
-        private void prijavaButton_Click(object sender, EventArgs e)
+        private void btnRegistracija_Click(object sender, EventArgs e)
         {
-            NeuspjesnaPrijavaForma form = new NeuspjesnaPrijavaForma();
-            form.Show();
+            RegistracijaForm form = new RegistracijaForm();
+            this.Hide();
+            form.ShowDialog();
         }
 
-        private void vratiAsortimanButton_Click(object sender, EventArgs e)
+        private void btnPrijava_Click(object sender, EventArgs e)
         {
-            AsortimanForma form = new AsortimanForma();
-            form.Show();
+            string korIme = tbKorIme.Text;
+            string lozinka = tbLozinka.Text;
+
+            AsortimanForma asortimanForma = new AsortimanForma();
+
+            using (var context = new PI2241_DBEntities())
+            {
+                var query = from u in context.Users
+                            where u.korisnickoIme == korIme && u.lozinka == lozinka
+                            select u;
+
+                if (query.Count() > 0)
+                {
+                    this.Hide();
+                    asortimanForma.ShowDialog();
+                }
+                else
+                {
+                    MessageBox.Show("Krivo uneseni podaci!");
+                }
+            }
         }
     }
 }

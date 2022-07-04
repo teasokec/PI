@@ -63,6 +63,16 @@ namespace NaruciISjedi.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _256x256bb {
+            get {
+                object obj = ResourceManager.GetObject("256x256bb", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap cookies_dessert_sweet_dessert_wallpaper_preview {
             get {
                 object obj = ResourceManager.GetObject("cookies-dessert-sweet-dessert-wallpaper-preview", resourceCulture);
