@@ -16,5 +16,13 @@ namespace NaruciISjedi
         {
             InitializeComponent();
         }
+
+        private void AsortimanForma_Load(object sender, EventArgs e)
+        {
+            using (var context = new PI2241_DBEntities())
+            {
+               // var query = from p in 
+            }
+        }
     }
 }

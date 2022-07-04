@@ -74,6 +74,7 @@
             this.Controls.Add(this.kreirajIzvjesceButton);
             this.Name = "AsortimanForma";
             this.Text = "AsortimanForma";
+            this.Load += new System.EventHandler(this.AsortimanForma_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
