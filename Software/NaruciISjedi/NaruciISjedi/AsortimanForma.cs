@@ -19,13 +19,7 @@ namespace NaruciISjedi
 
         private void AsortimanForma_Load(object sender, EventArgs e)
         {
-<<<<<<< HEAD
-            using (var context = new PI2241_DBEntities())
-            {
-               // var query = from p in 
-            }
-        }
-=======
+
             OsvjeziPrikaz();
         }
 
@@ -53,6 +47,6 @@ namespace NaruciISjedi
             this.Hide();
             form.ShowDialog();
         }
->>>>>>> f2e04d4b240743016ef30c8d20dc7c49ec710f8e
+
     }
 }

@@ -80,11 +80,11 @@
             this.Name = "AsortimanForma";
             this.Text = "AsortimanForma";
             this.Load += new System.EventHandler(this.AsortimanForma_Load);
-<<<<<<< HEAD
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-=======
+
+            //((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+
             ((System.ComponentModel.ISupportInitialize)(this.dgvProizvodi)).EndInit();
->>>>>>> f2e04d4b240743016ef30c8d20dc7c49ec710f8e
+
             this.ResumeLayout(false);
 
         }
