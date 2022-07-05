@@ -34,6 +34,12 @@ namespace NaruciISjedi
         {
             string datum = datumTextBox.Text;
             string vremenskiPeriod = periodGroupBox.Text;
+            
+        }
+
+        private void IzradaIzvjescaForma_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

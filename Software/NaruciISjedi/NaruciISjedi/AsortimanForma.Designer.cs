@@ -32,8 +32,7 @@
             this.kosaricaButton = new System.Windows.Forms.Button();
             this.dgvProizvodi = new System.Windows.Forms.DataGridView();
             this.kreirajIzvjesceButton = new System.Windows.Forms.Button();
-            this.kolicinaButton = new System.Windows.Forms.Button();
-            this.Količina = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Kupi = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.proizvodIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.iDVrstaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nazivDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -46,7 +45,6 @@
             this.userBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.typeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.orderBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.kolicinaTextBox = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProizvodi)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.userBindingSource)).BeginInit();
@@ -67,6 +65,8 @@
             // 
             // dgvProizvodi
             // 
+            this.dgvProizvodi.AllowUserToAddRows = false;
+            this.dgvProizvodi.AllowUserToDeleteRows = false;
             this.dgvProizvodi.AutoGenerateColumns = false;
             this.dgvProizvodi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvProizvodi.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -74,7 +74,7 @@
             this.iDVrstaDataGridViewTextBoxColumn,
             this.nazivDataGridViewTextBoxColumn,
             this.cijenaProizvodaDataGridViewTextBoxColumn,
-            this.Količina,
+            this.Kupi,
             this.sastojciDataGridViewTextBoxColumn,
             this.slikaProizvodaDataGridViewTextBoxColumn,
             this.ordersDataGridViewTextBoxColumn,
@@ -99,22 +99,15 @@
             this.kreirajIzvjesceButton.UseVisualStyleBackColor = true;
             this.kreirajIzvjesceButton.Click += new System.EventHandler(this.kreirajIzvjesceButton_Click);
             // 
-            // kolicinaButton
+            // Kupi
             // 
-            this.kolicinaButton.Location = new System.Drawing.Point(425, 379);
-            this.kolicinaButton.Name = "kolicinaButton";
-            this.kolicinaButton.Size = new System.Drawing.Size(109, 45);
-            this.kolicinaButton.TabIndex = 7;
-            this.kolicinaButton.Text = "Unesi zadanu kolicinu";
-            this.kolicinaButton.UseVisualStyleBackColor = true;
-            this.kolicinaButton.Click += new System.EventHandler(this.kolicinaButton_Click);
-            // 
-            // Količina
-            // 
-            this.Količina.HeaderText = "Količina";
-            this.Količina.MinimumWidth = 6;
-            this.Količina.Name = "Količina";
-            this.Količina.Width = 125;
+            this.Kupi.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Kupi.HeaderText = "Dodaj u košaricu";
+            this.Kupi.MinimumWidth = 6;
+            this.Kupi.Name = "Kupi";
+            this.Kupi.ReadOnly = true;
+            this.Kupi.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Kupi.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
             // proizvodIDDataGridViewTextBoxColumn
             // 
@@ -122,6 +115,7 @@
             this.proizvodIDDataGridViewTextBoxColumn.HeaderText = "proizvodID";
             this.proizvodIDDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.proizvodIDDataGridViewTextBoxColumn.Name = "proizvodIDDataGridViewTextBoxColumn";
+            this.proizvodIDDataGridViewTextBoxColumn.ReadOnly = true;
             this.proizvodIDDataGridViewTextBoxColumn.Visible = false;
             this.proizvodIDDataGridViewTextBoxColumn.Width = 125;
             // 
@@ -131,6 +125,7 @@
             this.iDVrstaDataGridViewTextBoxColumn.HeaderText = "IDVrsta";
             this.iDVrstaDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.iDVrstaDataGridViewTextBoxColumn.Name = "iDVrstaDataGridViewTextBoxColumn";
+            this.iDVrstaDataGridViewTextBoxColumn.ReadOnly = true;
             this.iDVrstaDataGridViewTextBoxColumn.Visible = false;
             this.iDVrstaDataGridViewTextBoxColumn.Width = 125;
             // 
@@ -140,6 +135,7 @@
             this.nazivDataGridViewTextBoxColumn.HeaderText = "naziv";
             this.nazivDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.nazivDataGridViewTextBoxColumn.Name = "nazivDataGridViewTextBoxColumn";
+            this.nazivDataGridViewTextBoxColumn.ReadOnly = true;
             this.nazivDataGridViewTextBoxColumn.Width = 125;
             // 
             // cijenaProizvodaDataGridViewTextBoxColumn
@@ -148,6 +144,7 @@
             this.cijenaProizvodaDataGridViewTextBoxColumn.HeaderText = "cijenaProizvoda";
             this.cijenaProizvodaDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.cijenaProizvodaDataGridViewTextBoxColumn.Name = "cijenaProizvodaDataGridViewTextBoxColumn";
+            this.cijenaProizvodaDataGridViewTextBoxColumn.ReadOnly = true;
             this.cijenaProizvodaDataGridViewTextBoxColumn.Width = 125;
             // 
             // sastojciDataGridViewTextBoxColumn
@@ -156,6 +153,7 @@
             this.sastojciDataGridViewTextBoxColumn.HeaderText = "sastojci";
             this.sastojciDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.sastojciDataGridViewTextBoxColumn.Name = "sastojciDataGridViewTextBoxColumn";
+            this.sastojciDataGridViewTextBoxColumn.ReadOnly = true;
             this.sastojciDataGridViewTextBoxColumn.Width = 125;
             // 
             // slikaProizvodaDataGridViewTextBoxColumn
@@ -164,6 +162,7 @@
             this.slikaProizvodaDataGridViewTextBoxColumn.HeaderText = "slikaProizvoda";
             this.slikaProizvodaDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.slikaProizvodaDataGridViewTextBoxColumn.Name = "slikaProizvodaDataGridViewTextBoxColumn";
+            this.slikaProizvodaDataGridViewTextBoxColumn.ReadOnly = true;
             this.slikaProizvodaDataGridViewTextBoxColumn.Width = 125;
             // 
             // ordersDataGridViewTextBoxColumn
@@ -172,6 +171,7 @@
             this.ordersDataGridViewTextBoxColumn.HeaderText = "Orders";
             this.ordersDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.ordersDataGridViewTextBoxColumn.Name = "ordersDataGridViewTextBoxColumn";
+            this.ordersDataGridViewTextBoxColumn.ReadOnly = true;
             this.ordersDataGridViewTextBoxColumn.Visible = false;
             this.ordersDataGridViewTextBoxColumn.Width = 125;
             // 
@@ -181,6 +181,7 @@
             this.typeDataGridViewTextBoxColumn.HeaderText = "Type";
             this.typeDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.typeDataGridViewTextBoxColumn.Name = "typeDataGridViewTextBoxColumn";
+            this.typeDataGridViewTextBoxColumn.ReadOnly = true;
             this.typeDataGridViewTextBoxColumn.Visible = false;
             this.typeDataGridViewTextBoxColumn.Width = 125;
             // 
@@ -200,21 +201,12 @@
             // 
             this.orderBindingSource.DataSource = typeof(NaruciISjedi.Order);
             // 
-            // kolicinaTextBox
-            // 
-            this.kolicinaTextBox.Location = new System.Drawing.Point(278, 390);
-            this.kolicinaTextBox.Name = "kolicinaTextBox";
-            this.kolicinaTextBox.Size = new System.Drawing.Size(100, 22);
-            this.kolicinaTextBox.TabIndex = 8;
-            // 
             // AsortimanForma
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::NaruciISjedi.Properties.Resources._256x256bb;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.kolicinaTextBox);
-            this.Controls.Add(this.kolicinaButton);
             this.Controls.Add(this.kosaricaButton);
             this.Controls.Add(this.dgvProizvodi);
             this.Controls.Add(this.kreirajIzvjesceButton);
@@ -228,7 +220,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.typeBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.orderBindingSource)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -237,20 +228,18 @@
         private System.Windows.Forms.Button kosaricaButton;
         private System.Windows.Forms.DataGridView dgvProizvodi;
         private System.Windows.Forms.Button kreirajIzvjesceButton;
-        private System.Windows.Forms.Button kolicinaButton;
         private System.Windows.Forms.BindingSource userBindingSource;
         private System.Windows.Forms.BindingSource productBindingSource;
         private System.Windows.Forms.BindingSource typeBindingSource;
+        private System.Windows.Forms.BindingSource orderBindingSource;
         private System.Windows.Forms.DataGridViewTextBoxColumn proizvodIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn iDVrstaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nazivDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn cijenaProizvodaDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Količina;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn Kupi;
         private System.Windows.Forms.DataGridViewTextBoxColumn sastojciDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn slikaProizvodaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn ordersDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn typeDataGridViewTextBoxColumn;
-        private System.Windows.Forms.BindingSource orderBindingSource;
-        private System.Windows.Forms.TextBox kolicinaTextBox;
     }
 }
