@@ -31,6 +31,7 @@ namespace NaruciISjedi
                             select p;
 
                 dgvProizvodi.DataSource = query.ToList();
+                
             }
         }
 
@@ -40,13 +41,33 @@ namespace NaruciISjedi
             this.Hide();
             form.ShowDialog();
         }
+        private void OdabirKolicine()
+        {
+            int kolicina = int.Parse(kolicinaTextBox.Text);
+        }
 
         private void kosaricaButton_Click(object sender, EventArgs e)
         {
+            Order narudzba = new Order();
+           
+            int kolicina = int.Parse(kolicinaTextBox.Text);
+            if (kolicina != 0)
+            {
+                narudzba =new Order{
+                    kolicina = kolicina,
+                    
+                };
+            }
+           
             KosaricaForma form = new KosaricaForma();
             this.Hide();
             form.ShowDialog();
         }
+       
 
+        private void kolicinaButton_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -180,6 +180,12 @@
       <DependentUpon>NaruciISjediModel.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\Order.datasource" />
+    <None Include="Properties\DataSources\Product.datasource" />
+    <None Include="Properties\DataSources\Report.datasource" />
+    <None Include="Properties\DataSources\Role.datasource" />
+    <None Include="Properties\DataSources\Type.datasource" />
+    <None Include="Properties\DataSources\User.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
