@@ -16,5 +16,24 @@ namespace NaruciISjedi
         {
             InitializeComponent();
         }
+
+        private void vratiAsortimanButton_Click(object sender, EventArgs e)
+        {
+            AsortimanForma form = new AsortimanForma();
+            this.Hide();
+            form.ShowDialog();
+        }
+
+        private void prikaziIzvjesceButton_Click(object sender, EventArgs e)
+        {
+            IspisIzvjescaForma form = new IspisIzvjescaForma();
+            this.Hide();
+            form.ShowDialog();
+        }
+        public void OdabraniPodatci()
+        {
+            string datum = datumTextBox.Text;
+            string vremenskiPeriod = periodGroupBox.Text;
+        }
     }
 }

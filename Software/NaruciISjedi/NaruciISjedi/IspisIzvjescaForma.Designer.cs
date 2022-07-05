@@ -36,55 +36,59 @@
             // 
             // vratiAsortimanButton
             // 
-            this.vratiAsortimanButton.Location = new System.Drawing.Point(304, 162);
-            this.vratiAsortimanButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.vratiAsortimanButton.Location = new System.Drawing.Point(405, 199);
+            this.vratiAsortimanButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.vratiAsortimanButton.Name = "vratiAsortimanButton";
-            this.vratiAsortimanButton.Size = new System.Drawing.Size(128, 41);
+            this.vratiAsortimanButton.Size = new System.Drawing.Size(171, 50);
             this.vratiAsortimanButton.TabIndex = 8;
             this.vratiAsortimanButton.Text = "Vrati se na pregled asortimana";
             this.vratiAsortimanButton.UseVisualStyleBackColor = true;
+            this.vratiAsortimanButton.Click += new System.EventHandler(this.vratiAsortimanButton_Click);
             // 
             // ispisiSlikovnoButton
             // 
-            this.ispisiSlikovnoButton.Location = new System.Drawing.Point(169, 162);
-            this.ispisiSlikovnoButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ispisiSlikovnoButton.Location = new System.Drawing.Point(225, 199);
+            this.ispisiSlikovnoButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ispisiSlikovnoButton.Name = "ispisiSlikovnoButton";
-            this.ispisiSlikovnoButton.Size = new System.Drawing.Size(84, 41);
+            this.ispisiSlikovnoButton.Size = new System.Drawing.Size(112, 50);
             this.ispisiSlikovnoButton.TabIndex = 7;
             this.ispisiSlikovnoButton.Text = "Ispiši slikovni prikaz";
             this.ispisiSlikovnoButton.UseVisualStyleBackColor = true;
+            this.ispisiSlikovnoButton.Click += new System.EventHandler(this.ispisiSlikovnoButton_Click);
             // 
             // ispisiIzvjesceButton
             // 
-            this.ispisiIzvjesceButton.Location = new System.Drawing.Point(451, 162);
-            this.ispisiIzvjesceButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ispisiIzvjesceButton.Location = new System.Drawing.Point(601, 199);
+            this.ispisiIzvjesceButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ispisiIzvjesceButton.Name = "ispisiIzvjesceButton";
-            this.ispisiIzvjesceButton.Size = new System.Drawing.Size(84, 41);
+            this.ispisiIzvjesceButton.Size = new System.Drawing.Size(112, 50);
             this.ispisiIzvjesceButton.TabIndex = 6;
             this.ispisiIzvjesceButton.Text = "Ispiši izvješće";
             this.ispisiIzvjesceButton.UseVisualStyleBackColor = true;
+            this.ispisiIzvjesceButton.Click += new System.EventHandler(this.ispisiIzvjesceButton_Click);
             // 
             // kreirajGrafButton
             // 
-            this.kreirajGrafButton.Location = new System.Drawing.Point(9, 162);
-            this.kreirajGrafButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.kreirajGrafButton.Location = new System.Drawing.Point(12, 199);
+            this.kreirajGrafButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.kreirajGrafButton.Name = "kreirajGrafButton";
-            this.kreirajGrafButton.Size = new System.Drawing.Size(84, 41);
+            this.kreirajGrafButton.Size = new System.Drawing.Size(112, 50);
             this.kreirajGrafButton.TabIndex = 5;
             this.kreirajGrafButton.Text = "Kreiraj slikovni prikaz";
             this.kreirajGrafButton.UseVisualStyleBackColor = true;
+            this.kreirajGrafButton.Click += new System.EventHandler(this.kreirajGrafButton_Click);
             // 
             // IspisIzvjescaForma
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::NaruciISjedi.Properties.Resources._256x256bb;
-            this.ClientSize = new System.Drawing.Size(544, 366);
+            this.ClientSize = new System.Drawing.Size(725, 450);
             this.Controls.Add(this.vratiAsortimanButton);
             this.Controls.Add(this.ispisiSlikovnoButton);
             this.Controls.Add(this.ispisiIzvjesceButton);
             this.Controls.Add(this.kreirajGrafButton);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "IspisIzvjescaForma";
             this.Text = "IspisIzvjescaForma";
             this.ResumeLayout(false);

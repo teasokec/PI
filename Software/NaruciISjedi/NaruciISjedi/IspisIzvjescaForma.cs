@@ -16,5 +16,27 @@ namespace NaruciISjedi
         {
             InitializeComponent();
         }
+
+        private void kreirajGrafButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ispisiSlikovnoButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void vratiAsortimanButton_Click(object sender, EventArgs e)
+        {
+            AsortimanForma form = new AsortimanForma();
+            this.Hide();
+            form.ShowDialog();
+        }
+
+        private void ispisiIzvjesceButton_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
