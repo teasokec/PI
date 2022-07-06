@@ -34,25 +34,27 @@
             this.kosaricaDataGridView = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.cijenaTextBox = new System.Windows.Forms.TextBox();
+            this.kolTextBox = new System.Windows.Forms.TextBox();
+            this.kolButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.kosaricaDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // potvrdaNarudzbeButton
             // 
-            this.potvrdaNarudzbeButton.Location = new System.Drawing.Point(490, 310);
-            this.potvrdaNarudzbeButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.potvrdaNarudzbeButton.Location = new System.Drawing.Point(653, 382);
+            this.potvrdaNarudzbeButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.potvrdaNarudzbeButton.Name = "potvrdaNarudzbeButton";
-            this.potvrdaNarudzbeButton.Size = new System.Drawing.Size(100, 28);
+            this.potvrdaNarudzbeButton.Size = new System.Drawing.Size(133, 34);
             this.potvrdaNarudzbeButton.TabIndex = 7;
             this.potvrdaNarudzbeButton.Text = "Potvrda narudžbe";
             this.potvrdaNarudzbeButton.UseVisualStyleBackColor = true;
             // 
             // vratiAsortimanButton
             // 
-            this.vratiAsortimanButton.Location = new System.Drawing.Point(352, 306);
-            this.vratiAsortimanButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.vratiAsortimanButton.Location = new System.Drawing.Point(469, 377);
+            this.vratiAsortimanButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.vratiAsortimanButton.Name = "vratiAsortimanButton";
-            this.vratiAsortimanButton.Size = new System.Drawing.Size(126, 39);
+            this.vratiAsortimanButton.Size = new System.Drawing.Size(168, 48);
             this.vratiAsortimanButton.TabIndex = 6;
             this.vratiAsortimanButton.Text = "Vrati se na pregled asortimana";
             this.vratiAsortimanButton.UseVisualStyleBackColor = true;
@@ -60,46 +62,65 @@
             // kosaricaDataGridView
             // 
             this.kosaricaDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.kosaricaDataGridView.Location = new System.Drawing.Point(9, 10);
-            this.kosaricaDataGridView.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.kosaricaDataGridView.Location = new System.Drawing.Point(12, 12);
+            this.kosaricaDataGridView.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.kosaricaDataGridView.Name = "kosaricaDataGridView";
             this.kosaricaDataGridView.RowHeadersWidth = 51;
             this.kosaricaDataGridView.RowTemplate.Height = 24;
-            this.kosaricaDataGridView.Size = new System.Drawing.Size(310, 275);
+            this.kosaricaDataGridView.Size = new System.Drawing.Size(413, 338);
             this.kosaricaDataGridView.TabIndex = 8;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(9, 317);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(12, 390);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(79, 13);
+            this.label1.Size = new System.Drawing.Size(96, 16);
             this.label1.TabIndex = 9;
             this.label1.Text = "Ukupna cijena:";
             // 
             // cijenaTextBox
             // 
-            this.cijenaTextBox.Location = new System.Drawing.Point(95, 317);
-            this.cijenaTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cijenaTextBox.Location = new System.Drawing.Point(127, 390);
+            this.cijenaTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cijenaTextBox.Name = "cijenaTextBox";
-            this.cijenaTextBox.Size = new System.Drawing.Size(76, 20);
+            this.cijenaTextBox.Size = new System.Drawing.Size(100, 22);
             this.cijenaTextBox.TabIndex = 10;
+            // 
+            // kolTextBox
+            // 
+            this.kolTextBox.Location = new System.Drawing.Point(483, 47);
+            this.kolTextBox.Name = "kolTextBox";
+            this.kolTextBox.Size = new System.Drawing.Size(100, 22);
+            this.kolTextBox.TabIndex = 11;
+            // 
+            // kolButton
+            // 
+            this.kolButton.Location = new System.Drawing.Point(611, 46);
+            this.kolButton.Name = "kolButton";
+            this.kolButton.Size = new System.Drawing.Size(75, 23);
+            this.kolButton.TabIndex = 12;
+            this.kolButton.Text = "Količina";
+            this.kolButton.UseVisualStyleBackColor = true;
+            this.kolButton.Click += new System.EventHandler(this.kolButton_Click);
             // 
             // KosaricaForma
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::NaruciISjedi.Properties.Resources._256x256bb;
-            this.ClientSize = new System.Drawing.Size(600, 366);
+            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.kolButton);
+            this.Controls.Add(this.kolTextBox);
             this.Controls.Add(this.cijenaTextBox);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.kosaricaDataGridView);
             this.Controls.Add(this.potvrdaNarudzbeButton);
             this.Controls.Add(this.vratiAsortimanButton);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "KosaricaForma";
             this.Text = "KosaricaForma";
+            this.Load += new System.EventHandler(this.KosaricaForma_Load);
             ((System.ComponentModel.ISupportInitialize)(this.kosaricaDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -114,5 +135,7 @@
         private System.Windows.Forms.DataGridView kosaricaDataGridView;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox cijenaTextBox;
+        private System.Windows.Forms.TextBox kolTextBox;
+        private System.Windows.Forms.Button kolButton;
     }
 }

@@ -12,7 +12,9 @@ namespace NaruciISjedi
 {
     public partial class AsortimanForma : Form
     {
-        private List<Product> izabraniProizvod;
+        private Product izabraniProizvod;
+        
+
         public AsortimanForma()
         {
             InitializeComponent();
@@ -20,7 +22,6 @@ namespace NaruciISjedi
 
         private void AsortimanForma_Load(object sender, EventArgs e)
         {
-
             OsvjeziPrikaz();
         }
 
@@ -32,28 +33,32 @@ namespace NaruciISjedi
                             select p;
 
                 dgvProizvodi.DataSource = query.ToList();
-                
+                dgvProizvodi.Columns["proizvodID"].Visible = false;
+                dgvProizvodi.Columns["IDVrsta"].Visible = false;
+                dgvProizvodi.Columns["Orders"].Visible = false;
             }
-            
         }
 
         private void kreirajIzvjesceButton_Click(object sender, EventArgs e)
         {
-            IzradaIzvjescaForma form = new IzradaIzvjescaForma();
+            IzradaIzvjescaForma forma = new IzradaIzvjescaForma();
             this.Hide();
-            form.ShowDialog();
+            forma.ShowDialog();
         }
-     
+
 
         private void kosaricaButton_Click(object sender, EventArgs e)
         {
 
-            KosaricaForma form = new KosaricaForma();
+            KosaricaForma forma = new KosaricaForma(izabraniProizvod);
             this.Hide();
-            form.ShowDialog();
+            forma.ShowDialog();
         }
-       
-
         
+        public Product OdabraniProizvod()
+        {
+            izabraniProizvod = dgvProizvodi.CurrentRow.DataBoundItem as Product;
+            return izabraniProizvod;
+        }
     }
 }

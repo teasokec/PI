@@ -37,5 +37,10 @@ namespace NaruciISjedi
             this.Hide();
             form.ShowDialog();
         }
+
+        private void PocetnaForma_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

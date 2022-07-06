@@ -38,19 +38,18 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label1.Location = new System.Drawing.Point(132, 70);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(176, 86);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(329, 55);
+            this.label1.Size = new System.Drawing.Size(413, 69);
             this.label1.TabIndex = 0;
             this.label1.Text = "Naruči i (s)jedi";
             // 
             // prijaviButton
             // 
-            this.prijaviButton.Location = new System.Drawing.Point(113, 195);
-            this.prijaviButton.Margin = new System.Windows.Forms.Padding(2);
+            this.prijaviButton.Location = new System.Drawing.Point(151, 240);
+            this.prijaviButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.prijaviButton.Name = "prijaviButton";
-            this.prijaviButton.Size = new System.Drawing.Size(101, 60);
+            this.prijaviButton.Size = new System.Drawing.Size(135, 74);
             this.prijaviButton.TabIndex = 1;
             this.prijaviButton.Text = "PRIJAVA";
             this.prijaviButton.UseVisualStyleBackColor = true;
@@ -58,10 +57,10 @@
             // 
             // asortimanButton
             // 
-            this.asortimanButton.Location = new System.Drawing.Point(383, 195);
-            this.asortimanButton.Margin = new System.Windows.Forms.Padding(2);
+            this.asortimanButton.Location = new System.Drawing.Point(511, 240);
+            this.asortimanButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.asortimanButton.Name = "asortimanButton";
-            this.asortimanButton.Size = new System.Drawing.Size(104, 60);
+            this.asortimanButton.Size = new System.Drawing.Size(139, 74);
             this.asortimanButton.TabIndex = 2;
             this.asortimanButton.Text = "PREGLED ASORTIMANA";
             this.asortimanButton.UseVisualStyleBackColor = true;
@@ -69,10 +68,10 @@
             // 
             // registracijaButton
             // 
-            this.registracijaButton.Location = new System.Drawing.Point(250, 195);
-            this.registracijaButton.Margin = new System.Windows.Forms.Padding(2);
+            this.registracijaButton.Location = new System.Drawing.Point(333, 240);
+            this.registracijaButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.registracijaButton.Name = "registracijaButton";
-            this.registracijaButton.Size = new System.Drawing.Size(101, 60);
+            this.registracijaButton.Size = new System.Drawing.Size(135, 74);
             this.registracijaButton.TabIndex = 3;
             this.registracijaButton.Text = "REGISTRACIJA";
             this.registracijaButton.UseVisualStyleBackColor = true;
@@ -80,17 +79,18 @@
             // 
             // PocetnaForma
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::NaruciISjedi.Properties.Resources._256x256bb;
-            this.ClientSize = new System.Drawing.Size(600, 366);
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.registracijaButton);
             this.Controls.Add(this.asortimanButton);
             this.Controls.Add(this.prijaviButton);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "PocetnaForma";
             this.Text = "Glavni Izbornik";
+            this.Load += new System.EventHandler(this.PocetnaForma_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -115,6 +115,7 @@
     <Compile Include="PrijavaForma.Designer.cs">
       <DependentUpon>PrijavaForma.cs</DependentUpon>
     </Compile>
+    <Compile Include="Product.code.cs" />
     <Compile Include="Product.cs">
       <DependentUpon>NaruciISjediModel.tt</DependentUpon>
     </Compile>
