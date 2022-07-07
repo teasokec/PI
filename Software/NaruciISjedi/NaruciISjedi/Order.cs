@@ -28,10 +28,12 @@ namespace NaruciISjedi
         public Nullable<double> ukupnaCijena { get; set; }
         public string adresaDostave { get; set; }
         public string kontakt { get; set; }
+        public Nullable<int> IDProizvod { get; set; }
     
         public virtual Product Product { get; set; }
         public virtual User User { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Report> Reports { get; set; }
+        public virtual Product Product1 { get; set; }
     }
 }

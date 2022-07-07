@@ -17,6 +17,7 @@
         <AssociationConnector Association="SjediIJediDB.FK_Product_Type" ManuallyRouted="false" />
         <AssociationConnector Association="SjediIJediDB.FK_Report_User" ManuallyRouted="false" />
         <AssociationConnector Association="SjediIJediDB.FK_User_Role" ManuallyRouted="false" />
+        <AssociationConnector Association="SjediIJediDB.FK_Order_Product1" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

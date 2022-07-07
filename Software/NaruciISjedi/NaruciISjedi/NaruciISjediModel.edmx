@@ -4,15 +4,15 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="SjediIJediDB.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="SjediIJediDB.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Order">
           <Key>
             <PropertyRef Name="narudzbaID" />
           </Key>
-          <Property Name="narudzbaID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="narudzbaID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
           <Property Name="IDKorisnik" Type="int" />
           <Property Name="kolicina" Type="int" />
-          <Property Name="IDProizovd" Type="int" />
+          <Property Name="IDProizvod" Type="int" />
           <Property Name="vrijemeDostave" Type="datetime" />
           <Property Name="ukupnaCijena" Type="float" />
           <Property Name="adresaDostave" Type="varchar" MaxLength="50" />
@@ -23,47 +23,48 @@
             <PropertyRef Name="proizvodID" />
           </Key>
           <Property Name="proizvodID" Type="int" Nullable="false" />
-          <Property Name="IDVrsta" Type="int" />
           <Property Name="naziv" Type="varchar" MaxLength="50" />
           <Property Name="sastojci" Type="text" />
           <Property Name="cijenaProizvoda" Type="float" />
-          <Property Name="slikaProizvoda" Type="varchar" MaxLength="250" />
+          <Property Name="slikaProizvoda" Type="varchar" MaxLength="500" />
+          <Property Name="IDVrsta" Type="int" />
         </EntityType>
         <EntityType Name="Report">
           <Key>
             <PropertyRef Name="izvjesceID" />
           </Key>
-          <Property Name="izvjesceID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="izvjesceID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
           <Property Name="IDKorisnik" Type="int" />
           <Property Name="IDNarudzba" Type="int" />
-          <Property Name="datumIzrade" Type="date" />
+          <Property Name="datumIzrade" Type="datetime" />
         </EntityType>
         <EntityType Name="Role">
           <Key>
             <PropertyRef Name="ulogaID" />
           </Key>
-          <Property Name="ulogaID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="naziv" Type="varchar" MaxLength="20" />
+          <Property Name="ulogaID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="naziv" Type="varchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="Type">
           <Key>
             <PropertyRef Name="vrstaID" />
           </Key>
-          <Property Name="vrstaID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="vrstaID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
           <Property Name="naziv" Type="varchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="User">
           <Key>
             <PropertyRef Name="korisnikID" />
           </Key>
-          <Property Name="korisnikID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="IDUloga" Type="int" />
+          <Property Name="korisnikID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
           <Property Name="ime" Type="varchar" MaxLength="50" />
           <Property Name="prezime" Type="varchar" MaxLength="50" />
+          <Property Name="email" Type="varchar" MaxLength="50" />
+          <Property Name="korisnickoIme" Type="varchar" MaxLength="50" />
+          <Property Name="lozinka" Type="char" MaxLength="10" />
           <Property Name="adresa" Type="varchar" MaxLength="50" />
           <Property Name="kontakt" Type="varchar" MaxLength="50" />
-          <Property Name="korisnickoIme" Type="char" MaxLength="15" />
-          <Property Name="lozinka" Type="char" MaxLength="10" />
+          <Property Name="IDUloga" Type="int" />
         </EntityType>
         <Association Name="FK_Order_Product">
           <End Role="Product" Type="Self.Product" Multiplicity="0..1" />
@@ -73,7 +74,7 @@
               <PropertyRef Name="proizvodID" />
             </Principal>
             <Dependent Role="Order">
-              <PropertyRef Name="IDProizovd" />
+              <PropertyRef Name="IDProizvod" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -89,7 +90,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_Product_Type">
+        <Association Name="FK_Product_Product">
           <End Role="Type" Type="Self.Type" Multiplicity="0..1" />
           <End Role="Product" Type="Self.Product" Multiplicity="*" />
           <ReferentialConstraint>
@@ -152,7 +153,7 @@
             <End Role="User" EntitySet="User" />
             <End Role="Order" EntitySet="Order" />
           </AssociationSet>
-          <AssociationSet Name="FK_Product_Type" Association="Self.FK_Product_Type">
+          <AssociationSet Name="FK_Product_Product" Association="Self.FK_Product_Product">
             <End Role="Type" EntitySet="Type" />
             <End Role="Product" EntitySet="Product" />
           </AssociationSet>
@@ -169,8 +170,7 @@
             <End Role="User" EntitySet="User" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="SjediIJediDB" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -189,6 +189,8 @@
           <NavigationProperty Name="Product" Relationship="Self.FK_Order_Product" FromRole="Order" ToRole="Product" />
           <NavigationProperty Name="User" Relationship="Self.FK_Order_User" FromRole="Order" ToRole="User" />
           <NavigationProperty Name="Reports" Relationship="Self.FK_Report_Order" FromRole="Order" ToRole="Report" />
+          <Property Name="IDProizvod" Type="Int32" />
+          <NavigationProperty Name="Product1" Relationship="SjediIJediDB.FK_Order_Product1" FromRole="Order" ToRole="Product" />
         </EntityType>
         <EntityType Name="Product">
           <Key>
@@ -199,9 +201,10 @@
           <Property Name="naziv" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="sastojci" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
           <Property Name="cijenaProizvoda" Type="Double" />
-          <Property Name="slikaProizvoda" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="slikaProizvoda" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="Orders" Relationship="Self.FK_Order_Product" FromRole="Product" ToRole="Order" />
           <NavigationProperty Name="Type" Relationship="Self.FK_Product_Type" FromRole="Product" ToRole="Type" />
+          <NavigationProperty Name="Orders1" Relationship="SjediIJediDB.FK_Order_Product1" FromRole="Product" ToRole="Order" />
         </EntityType>
         <EntityType Name="Report">
           <Key>
@@ -210,7 +213,7 @@
           <Property Name="izvjesceID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="IDKorisnik" Type="Int32" />
           <Property Name="IDNarudzba" Type="Int32" />
-          <Property Name="datumIzrade" Type="DateTime" Precision="0" />
+          <Property Name="datumIzrade" Type="DateTime" Precision="3" />
           <NavigationProperty Name="Order" Relationship="Self.FK_Report_Order" FromRole="Report" ToRole="Order" />
           <NavigationProperty Name="User" Relationship="Self.FK_Report_User" FromRole="Report" ToRole="User" />
         </EntityType>
@@ -219,7 +222,7 @@
             <PropertyRef Name="ulogaID" />
           </Key>
           <Property Name="ulogaID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="naziv" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="naziv" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="Users" Relationship="Self.FK_User_Role" FromRole="Role" ToRole="User" />
         </EntityType>
         <EntityType Name="Type">
@@ -240,11 +243,12 @@
           <Property Name="prezime" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="adresa" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="kontakt" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="korisnickoIme" Type="String" MaxLength="15" FixedLength="true" Unicode="false" />
+          <Property Name="korisnickoIme" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="lozinka" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
           <NavigationProperty Name="Orders" Relationship="Self.FK_Order_User" FromRole="User" ToRole="Order" />
           <NavigationProperty Name="Reports" Relationship="Self.FK_Report_User" FromRole="User" ToRole="Report" />
           <NavigationProperty Name="Role" Relationship="Self.FK_User_Role" FromRole="User" ToRole="Role" />
+          <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
         </EntityType>
         <Association Name="FK_Order_Product">
           <End Role="Product" Type="Self.Product" Multiplicity="0..1" />
@@ -349,7 +353,23 @@
             <End Role="Role" EntitySet="Roles" />
             <End Role="User" EntitySet="Users" />
           </AssociationSet>
+          <AssociationSet Name="FK_Order_Product1" Association="SjediIJediDB.FK_Order_Product1">
+            <End Role="Product" EntitySet="Products" />
+            <End Role="Order" EntitySet="Orders" />
+          </AssociationSet>
         </EntityContainer>
+        <Association Name="FK_Order_Product1">
+          <End Type="SjediIJediDB.Product" Role="Product" Multiplicity="0..1" />
+          <End Type="SjediIJediDB.Order" Role="Order" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Product">
+              <PropertyRef Name="proizvodID" />
+            </Principal>
+            <Dependent Role="Order">
+              <PropertyRef Name="IDProizvod" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -359,10 +379,10 @@
           <EntitySetMapping Name="Orders">
             <EntityTypeMapping TypeName="SjediIJediDB.Order">
               <MappingFragment StoreEntitySet="Order">
+                <ScalarProperty Name="IDProizvod" ColumnName="IDProizvod" />
                 <ScalarProperty Name="narudzbaID" ColumnName="narudzbaID" />
                 <ScalarProperty Name="IDKorisnik" ColumnName="IDKorisnik" />
                 <ScalarProperty Name="kolicina" ColumnName="kolicina" />
-                <ScalarProperty Name="IDProizovd" ColumnName="IDProizovd" />
                 <ScalarProperty Name="vrijemeDostave" ColumnName="vrijemeDostave" />
                 <ScalarProperty Name="ukupnaCijena" ColumnName="ukupnaCijena" />
                 <ScalarProperty Name="adresaDostave" ColumnName="adresaDostave" />
@@ -411,6 +431,7 @@
           <EntitySetMapping Name="Users">
             <EntityTypeMapping TypeName="SjediIJediDB.User">
               <MappingFragment StoreEntitySet="User">
+                <ScalarProperty Name="email" ColumnName="email" />
                 <ScalarProperty Name="korisnikID" ColumnName="korisnikID" />
                 <ScalarProperty Name="IDUloga" ColumnName="IDUloga" />
                 <ScalarProperty Name="ime" ColumnName="ime" />

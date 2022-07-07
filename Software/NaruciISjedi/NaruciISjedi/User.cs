@@ -29,6 +29,7 @@ namespace NaruciISjedi
         public string kontakt { get; set; }
         public string korisnickoIme { get; set; }
         public string lozinka { get; set; }
+        public string email { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Order> Orders { get; set; }

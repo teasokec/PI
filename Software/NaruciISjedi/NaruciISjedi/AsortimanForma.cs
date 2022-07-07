@@ -29,13 +29,14 @@ namespace NaruciISjedi
         {
             using (var context = new PI2241_DBEntities())
             {
-                var query = from p in context.Products.Include("Orders").Include("Type")
+                var query = from p in context.Products.Include("Orders").Include("Type").Include("Orders1")
                             select p;
 
                 dgvProizvodi.DataSource = query.ToList();
                 dgvProizvodi.Columns["proizvodID"].Visible = false;
                 dgvProizvodi.Columns["IDVrsta"].Visible = false;
                 dgvProizvodi.Columns["Orders"].Visible = false;
+                dgvProizvodi.Columns["Orders1"].Visible = false;
             }
         }
 
