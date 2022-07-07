@@ -23,17 +23,15 @@ namespace NaruciISjedi
         public int narudzbaID { get; set; }
         public Nullable<int> IDKorisnik { get; set; }
         public Nullable<int> kolicina { get; set; }
-        public Nullable<int> IDProizovd { get; set; }
+        public Nullable<int> IDProizvod { get; set; }
         public Nullable<System.DateTime> vrijemeDostave { get; set; }
         public Nullable<double> ukupnaCijena { get; set; }
         public string adresaDostave { get; set; }
         public string kontakt { get; set; }
-        public Nullable<int> IDProizvod { get; set; }
     
         public virtual Product Product { get; set; }
         public virtual User User { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Report> Reports { get; set; }
-        public virtual Product Product1 { get; set; }
     }
 }
