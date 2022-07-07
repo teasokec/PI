@@ -67,6 +67,12 @@
     <Compile Include="AzuriranjeArtiklaForma.Designer.cs">
       <DependentUpon>AzuriranjeArtiklaForma.cs</DependentUpon>
     </Compile>
+    <Compile Include="DodavanjeArtiklaForma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DodavanjeArtiklaForma.Designer.cs">
+      <DependentUpon>DodavanjeArtiklaForma.cs</DependentUpon>
+    </Compile>
     <Compile Include="Model1.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -144,6 +150,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AzuriranjeArtiklaForma.resx">
       <DependentUpon>AzuriranjeArtiklaForma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DodavanjeArtiklaForma.resx">
+      <DependentUpon>DodavanjeArtiklaForma.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PocetnaForma.resx">
       <DependentUpon>PocetnaForma.cs</DependentUpon>

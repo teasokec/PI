@@ -65,9 +65,16 @@ namespace NaruciISjedi
         {
             Product selektirani = dgvProizvodi.CurrentRow.DataBoundItem as Product;
 
-            AzuriranjeArtiklaForma dodavanjeArtiklaForma = new AzuriranjeArtiklaForma(selektirani);
+            AzuriranjeArtiklaForma azuriranje = new AzuriranjeArtiklaForma(selektirani);
             this.Hide();
-            dodavanjeArtiklaForma.ShowDialog();
+            azuriranje.ShowDialog();
+        }
+
+        private void btnDodaj_Click(object sender, EventArgs e)
+        {
+            DodavanjeArtiklaForma dodavanje = new DodavanjeArtiklaForma();
+            this.Hide();
+            dodavanje.ShowDialog();
         }
     }
 }
