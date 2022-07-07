@@ -60,5 +60,14 @@ namespace NaruciISjedi
             izabraniProizvod = dgvProizvodi.CurrentRow.DataBoundItem as Product;
             return izabraniProizvod;
         }
+
+        private void btnArtikl_Click(object sender, EventArgs e)
+        {
+            Product selektirani = dgvProizvodi.CurrentRow.DataBoundItem as Product;
+
+            AzuriranjeArtiklaForma dodavanjeArtiklaForma = new AzuriranjeArtiklaForma(selektirani);
+            this.Hide();
+            dodavanjeArtiklaForma.ShowDialog();
+        }
     }
 }

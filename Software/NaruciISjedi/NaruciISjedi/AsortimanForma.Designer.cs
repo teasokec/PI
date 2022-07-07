@@ -36,6 +36,7 @@
             this.userBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.typeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.orderBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.btnArtikl = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProizvodi)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.userBindingSource)).BeginInit();
@@ -45,10 +46,10 @@
             // 
             // kosaricaButton
             // 
-            this.kosaricaButton.Location = new System.Drawing.Point(669, 379);
-            this.kosaricaButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.kosaricaButton.Location = new System.Drawing.Point(502, 308);
+            this.kosaricaButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.kosaricaButton.Name = "kosaricaButton";
-            this.kosaricaButton.Size = new System.Drawing.Size(112, 50);
+            this.kosaricaButton.Size = new System.Drawing.Size(84, 41);
             this.kosaricaButton.TabIndex = 5;
             this.kosaricaButton.Text = "Košarica";
             this.kosaricaButton.UseVisualStyleBackColor = true;
@@ -59,20 +60,20 @@
             this.dgvProizvodi.AllowUserToAddRows = false;
             this.dgvProizvodi.AllowUserToDeleteRows = false;
             this.dgvProizvodi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvProizvodi.Location = new System.Drawing.Point(12, 11);
-            this.dgvProizvodi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dgvProizvodi.Location = new System.Drawing.Point(9, 9);
+            this.dgvProizvodi.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgvProizvodi.Name = "dgvProizvodi";
             this.dgvProizvodi.RowHeadersWidth = 51;
             this.dgvProizvodi.RowTemplate.Height = 24;
-            this.dgvProizvodi.Size = new System.Drawing.Size(764, 336);
+            this.dgvProizvodi.Size = new System.Drawing.Size(573, 273);
             this.dgvProizvodi.TabIndex = 4;
             // 
             // kreirajIzvjesceButton
             // 
-            this.kreirajIzvjesceButton.Location = new System.Drawing.Point(19, 379);
-            this.kreirajIzvjesceButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.kreirajIzvjesceButton.Location = new System.Drawing.Point(14, 308);
+            this.kreirajIzvjesceButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.kreirajIzvjesceButton.Name = "kreirajIzvjesceButton";
-            this.kreirajIzvjesceButton.Size = new System.Drawing.Size(112, 50);
+            this.kreirajIzvjesceButton.Size = new System.Drawing.Size(84, 41);
             this.kreirajIzvjesceButton.TabIndex = 3;
             this.kreirajIzvjesceButton.Text = "Kreiraj izvješće";
             this.kreirajIzvjesceButton.UseVisualStyleBackColor = true;
@@ -94,16 +95,27 @@
             // 
             this.orderBindingSource.DataSource = typeof(NaruciISjedi.Order);
             // 
+            // btnArtikl
+            // 
+            this.btnArtikl.Location = new System.Drawing.Point(103, 308);
+            this.btnArtikl.Name = "btnArtikl";
+            this.btnArtikl.Size = new System.Drawing.Size(78, 41);
+            this.btnArtikl.TabIndex = 6;
+            this.btnArtikl.Text = "Detalji o artiklu";
+            this.btnArtikl.UseVisualStyleBackColor = true;
+            this.btnArtikl.Click += new System.EventHandler(this.btnArtikl_Click);
+            // 
             // AsortimanForma
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::NaruciISjedi.Properties.Resources._256x256bb;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(600, 366);
+            this.Controls.Add(this.btnArtikl);
             this.Controls.Add(this.kosaricaButton);
             this.Controls.Add(this.dgvProizvodi);
             this.Controls.Add(this.kreirajIzvjesceButton);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "AsortimanForma";
             this.Text = "AsortimanForma";
             this.Load += new System.EventHandler(this.AsortimanForma_Load);
@@ -125,5 +137,6 @@
         private System.Windows.Forms.BindingSource productBindingSource;
         private System.Windows.Forms.BindingSource typeBindingSource;
         private System.Windows.Forms.BindingSource orderBindingSource;
+        private System.Windows.Forms.Button btnArtikl;
     }
 }
