@@ -61,6 +61,21 @@
     <Compile Include="AsortimanForma.Designer.cs">
       <DependentUpon>AsortimanForma.cs</DependentUpon>
     </Compile>
+    <Compile Include="Model1.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Compile>
     <Compile Include="PocetnaForma.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -85,21 +100,6 @@
     <Compile Include="KosaricaForma.Designer.cs">
       <DependentUpon>KosaricaForma.cs</DependentUpon>
     </Compile>
-    <Compile Include="NaruciISjediModel.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>NaruciISjediModel.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="NaruciISjediModel.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>NaruciISjediModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="NaruciISjediModel.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>NaruciISjediModel.edmx</DependentUpon>
-    </Compile>
     <Compile Include="NeuspjesnaPrijavaForma.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -107,7 +107,7 @@
       <DependentUpon>NeuspjesnaPrijavaForma.cs</DependentUpon>
     </Compile>
     <Compile Include="Order.cs">
-      <DependentUpon>NaruciISjediModel.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="PrijavaForma.cs">
       <SubType>Form</SubType>
@@ -117,7 +117,7 @@
     </Compile>
     <Compile Include="Product.code.cs" />
     <Compile Include="Product.cs">
-      <DependentUpon>NaruciISjediModel.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -128,16 +128,16 @@
       <DependentUpon>RegistracijaForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Report.cs">
-      <DependentUpon>NaruciISjediModel.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Role.cs">
-      <DependentUpon>NaruciISjediModel.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Type.cs">
-      <DependentUpon>NaruciISjediModel.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="User.cs">
-      <DependentUpon>NaruciISjediModel.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <EmbeddedResource Include="AsortimanForma.resx">
       <DependentUpon>AsortimanForma.cs</DependentUpon>
@@ -173,12 +173,12 @@
     <EmbeddedResource Include="RegistracijaForm.resx">
       <DependentUpon>RegistracijaForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EntityDeploy Include="NaruciISjediModel.edmx">
+    <EntityDeploy Include="Model1.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>NaruciISjediModel.Designer.cs</LastGenOutput>
+      <LastGenOutput>Model1.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="NaruciISjediModel.edmx.diagram">
-      <DependentUpon>NaruciISjediModel.edmx</DependentUpon>
+    <None Include="Model1.edmx.diagram">
+      <DependentUpon>Model1.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\Order.datasource" />
@@ -201,15 +201,15 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="NaruciISjediModel.Context.tt">
+    <Content Include="Model1.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>NaruciISjediModel.Context.cs</LastGenOutput>
-      <DependentUpon>NaruciISjediModel.edmx</DependentUpon>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="NaruciISjediModel.tt">
+    <Content Include="Model1.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>NaruciISjediModel.edmx</DependentUpon>
-      <LastGenOutput>NaruciISjediModel.cs</LastGenOutput>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
     <None Include="Resources\256x256bb.jpg" />
     <None Include="Resources\cookies-dessert-sweet-dessert-wallpaper-preview.jpg" />

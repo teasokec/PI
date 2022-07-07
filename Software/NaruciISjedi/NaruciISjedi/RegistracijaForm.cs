@@ -42,7 +42,7 @@ namespace NaruciISjedi
             string lozinka = lozinkaTextBox.Text;
             int uloga = cmbUloga.SelectedIndex;
 
-            using (var context = new PI2241_DBEntities())
+            using (var context = new PI2241_DBEntities1())
             {
                 User user = new User()
                 {
@@ -62,7 +62,7 @@ namespace NaruciISjedi
 
         private void RegistracijaForm_Load(object sender, EventArgs e)
         {
-            using (var context = new PI2241_DBEntities())
+            using (var context = new PI2241_DBEntities1())
             {
                 var query = from r in context.Roles
                             select r.naziv;

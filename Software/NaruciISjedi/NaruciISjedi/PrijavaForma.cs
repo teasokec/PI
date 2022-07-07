@@ -38,7 +38,7 @@ namespace NaruciISjedi
 
             AsortimanForma asortimanForma = new AsortimanForma();
 
-            using (var context = new PI2241_DBEntities())
+            using (var context = new PI2241_DBEntities1())
             {
                 var query = from u in context.Users
                             where u.korisnickoIme == korIme && u.lozinka == lozinka
