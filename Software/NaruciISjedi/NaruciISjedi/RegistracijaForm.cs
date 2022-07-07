@@ -34,8 +34,10 @@ namespace NaruciISjedi
 
         private void btnRegistracija_Click(object sender, EventArgs e)
         {
+            int brojac = 0;
             string ime = imeTextBox.Text;
             string prezime = prezimeTextBox.Text;
+            string email = emailTextBox.Text;
             string kontakt = kontaktTextBox.Text;
             string adresa = adresaTextBox.Text;
             string korIme = korisnickoImeTextBox.Text;
@@ -44,20 +46,31 @@ namespace NaruciISjedi
 
             using (var context = new PI2241_DBEntities1())
             {
+
+                var query = from u in context.Users
+                            select u;
+                brojac = query.Count();
+
                 User user = new User()
                 {
+                    korisnikID = brojac + 1,
                     ime = ime,
                     prezime = prezime,
                     kontakt = kontakt,
+                    email = email,
                     adresa = adresa,
                     korisnickoIme = korIme,
                     lozinka = lozinka,
-                    IDUloga = 6
+                    IDUloga = uloga + 1
                 };
 
                 context.Users.Add(user);
                 context.SaveChanges();
             }
+            PocetnaForma form = new PocetnaForma();
+            this.Hide();
+            form.ShowDialog();
+
         }
 
         private void RegistracijaForm_Load(object sender, EventArgs e)

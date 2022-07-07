@@ -45,6 +45,8 @@
             this.btnPrijava = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.cmbUloga = new System.Windows.Forms.ComboBox();
+            this.emailTextBox = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -70,7 +72,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(52, 110);
+            this.label3.Location = new System.Drawing.Point(53, 152);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(70, 13);
@@ -80,7 +82,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(54, 143);
+            this.label4.Location = new System.Drawing.Point(55, 185);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(43, 13);
@@ -90,7 +92,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(54, 173);
+            this.label5.Location = new System.Drawing.Point(55, 215);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(78, 13);
@@ -100,7 +102,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(54, 208);
+            this.label6.Location = new System.Drawing.Point(55, 250);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(47, 13);
@@ -125,7 +127,7 @@
             // 
             // kontaktTextBox
             // 
-            this.kontaktTextBox.Location = new System.Drawing.Point(156, 110);
+            this.kontaktTextBox.Location = new System.Drawing.Point(157, 152);
             this.kontaktTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.kontaktTextBox.Name = "kontaktTextBox";
             this.kontaktTextBox.Size = new System.Drawing.Size(150, 20);
@@ -133,7 +135,7 @@
             // 
             // adresaTextBox
             // 
-            this.adresaTextBox.Location = new System.Drawing.Point(156, 141);
+            this.adresaTextBox.Location = new System.Drawing.Point(157, 183);
             this.adresaTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.adresaTextBox.Name = "adresaTextBox";
             this.adresaTextBox.Size = new System.Drawing.Size(150, 20);
@@ -141,7 +143,7 @@
             // 
             // korisnickoImeTextBox
             // 
-            this.korisnickoImeTextBox.Location = new System.Drawing.Point(156, 173);
+            this.korisnickoImeTextBox.Location = new System.Drawing.Point(157, 215);
             this.korisnickoImeTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.korisnickoImeTextBox.Name = "korisnickoImeTextBox";
             this.korisnickoImeTextBox.Size = new System.Drawing.Size(150, 20);
@@ -149,7 +151,7 @@
             // 
             // lozinkaTextBox
             // 
-            this.lozinkaTextBox.Location = new System.Drawing.Point(156, 206);
+            this.lozinkaTextBox.Location = new System.Drawing.Point(157, 248);
             this.lozinkaTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.lozinkaTextBox.Name = "lozinkaTextBox";
             this.lozinkaTextBox.Size = new System.Drawing.Size(150, 20);
@@ -157,7 +159,7 @@
             // 
             // btnRegistracija
             // 
-            this.btnRegistracija.Location = new System.Drawing.Point(49, 287);
+            this.btnRegistracija.Location = new System.Drawing.Point(50, 327);
             this.btnRegistracija.Margin = new System.Windows.Forms.Padding(2);
             this.btnRegistracija.Name = "btnRegistracija";
             this.btnRegistracija.Size = new System.Drawing.Size(83, 38);
@@ -168,7 +170,7 @@
             // 
             // btnOdustani
             // 
-            this.btnOdustani.Location = new System.Drawing.Point(223, 287);
+            this.btnOdustani.Location = new System.Drawing.Point(224, 327);
             this.btnOdustani.Margin = new System.Windows.Forms.Padding(2);
             this.btnOdustani.Name = "btnOdustani";
             this.btnOdustani.Size = new System.Drawing.Size(83, 38);
@@ -179,7 +181,7 @@
             // 
             // btnPrijava
             // 
-            this.btnPrijava.Location = new System.Drawing.Point(136, 287);
+            this.btnPrijava.Location = new System.Drawing.Point(137, 327);
             this.btnPrijava.Margin = new System.Windows.Forms.Padding(2);
             this.btnPrijava.Name = "btnPrijava";
             this.btnPrijava.Size = new System.Drawing.Size(83, 38);
@@ -191,7 +193,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(54, 248);
+            this.label7.Location = new System.Drawing.Point(54, 287);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(38, 13);
             this.label7.TabIndex = 15;
@@ -200,17 +202,37 @@
             // cmbUloga
             // 
             this.cmbUloga.FormattingEnabled = true;
-            this.cmbUloga.Location = new System.Drawing.Point(156, 248);
+            this.cmbUloga.Location = new System.Drawing.Point(156, 287);
             this.cmbUloga.Name = "cmbUloga";
             this.cmbUloga.Size = new System.Drawing.Size(150, 21);
             this.cmbUloga.TabIndex = 16;
+            // 
+            // emailTextBox
+            // 
+            this.emailTextBox.Location = new System.Drawing.Point(156, 114);
+            this.emailTextBox.Margin = new System.Windows.Forms.Padding(2);
+            this.emailTextBox.Name = "emailTextBox";
+            this.emailTextBox.Size = new System.Drawing.Size(150, 20);
+            this.emailTextBox.TabIndex = 18;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(52, 114);
+            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(35, 13);
+            this.label8.TabIndex = 17;
+            this.label8.Text = "Email:";
             // 
             // RegistracijaForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::NaruciISjedi.Properties.Resources._256x256bb;
-            this.ClientSize = new System.Drawing.Size(343, 347);
+            this.ClientSize = new System.Drawing.Size(343, 400);
+            this.Controls.Add(this.emailTextBox);
+            this.Controls.Add(this.label8);
             this.Controls.Add(this.cmbUloga);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.btnPrijava);
@@ -256,5 +278,7 @@
         private System.Windows.Forms.Button btnPrijava;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.ComboBox cmbUloga;
+        private System.Windows.Forms.TextBox emailTextBox;
+        private System.Windows.Forms.Label label8;
     }
 }
