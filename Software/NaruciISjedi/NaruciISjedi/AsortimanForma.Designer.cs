@@ -33,11 +33,12 @@
             this.dgvProizvodi = new System.Windows.Forms.DataGridView();
             this.kreirajIzvjesceButton = new System.Windows.Forms.Button();
             this.btnArtikl = new System.Windows.Forms.Button();
+            this.btnDodaj = new System.Windows.Forms.Button();
             this.productBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.userBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.typeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.orderBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.btnDodaj = new System.Windows.Forms.Button();
+            this.btnOdjava = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProizvodi)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.userBindingSource)).BeginInit();
@@ -90,6 +91,16 @@
             this.btnArtikl.UseVisualStyleBackColor = true;
             this.btnArtikl.Click += new System.EventHandler(this.btnArtikl_Click);
             // 
+            // btnDodaj
+            // 
+            this.btnDodaj.Location = new System.Drawing.Point(187, 308);
+            this.btnDodaj.Name = "btnDodaj";
+            this.btnDodaj.Size = new System.Drawing.Size(75, 41);
+            this.btnDodaj.TabIndex = 7;
+            this.btnDodaj.Text = "Dodaj novi proizvod";
+            this.btnDodaj.UseVisualStyleBackColor = true;
+            this.btnDodaj.Click += new System.EventHandler(this.btnDodaj_Click);
+            // 
             // productBindingSource
             // 
             this.productBindingSource.DataSource = typeof(NaruciISjedi.Product);
@@ -106,15 +117,15 @@
             // 
             this.orderBindingSource.DataSource = typeof(NaruciISjedi.Order);
             // 
-            // btnDodaj
+            // btnOdjava
             // 
-            this.btnDodaj.Location = new System.Drawing.Point(187, 308);
-            this.btnDodaj.Name = "btnDodaj";
-            this.btnDodaj.Size = new System.Drawing.Size(75, 41);
-            this.btnDodaj.TabIndex = 7;
-            this.btnDodaj.Text = "Dodaj novi proizvod";
-            this.btnDodaj.UseVisualStyleBackColor = true;
-            this.btnDodaj.Click += new System.EventHandler(this.btnDodaj_Click);
+            this.btnOdjava.Location = new System.Drawing.Point(422, 308);
+            this.btnOdjava.Name = "btnOdjava";
+            this.btnOdjava.Size = new System.Drawing.Size(75, 41);
+            this.btnOdjava.TabIndex = 8;
+            this.btnOdjava.Text = "Odjava";
+            this.btnOdjava.UseVisualStyleBackColor = true;
+            this.btnOdjava.Click += new System.EventHandler(this.btnOdjava_Click);
             // 
             // AsortimanForma
             // 
@@ -122,6 +133,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::NaruciISjedi.Properties.Resources._256x256bb;
             this.ClientSize = new System.Drawing.Size(600, 366);
+            this.Controls.Add(this.btnOdjava);
             this.Controls.Add(this.btnDodaj);
             this.Controls.Add(this.btnArtikl);
             this.Controls.Add(this.kosaricaButton);
@@ -151,5 +163,6 @@
         private System.Windows.Forms.BindingSource orderBindingSource;
         private System.Windows.Forms.Button btnArtikl;
         private System.Windows.Forms.Button btnDodaj;
+        private System.Windows.Forms.Button btnOdjava;
     }
 }

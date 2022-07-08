@@ -13,16 +13,37 @@ namespace NaruciISjedi
     public partial class AsortimanForma : Form
     {
         private Product izabraniProizvod;
-        
+        private User korisnik;
 
-        public AsortimanForma()
+        public AsortimanForma(User user)
         {
             InitializeComponent();
+            korisnik = user;
         }
 
         private void AsortimanForma_Load(object sender, EventArgs e)
         {
-            OsvjeziPrikaz();
+            if (korisnik == null)
+            {
+                OsvjeziPrikaz();
+                kreirajIzvjesceButton.Visible = false;
+                btnArtikl.Visible = false;
+                btnDodaj.Visible = false;
+                btnOdjava.Visible = false;
+            }
+ 
+            else if (korisnik.IDUloga != 4)
+            {
+                OsvjeziPrikaz();
+                kreirajIzvjesceButton.Visible = true;
+                btnArtikl.Visible = true;
+                btnDodaj.Visible = true;
+                btnOdjava.Visible = true;
+            }
+            else
+            {
+                btnOdjava.Visible = true;
+            }
         }
 
         private void OsvjeziPrikaz()
@@ -75,6 +96,13 @@ namespace NaruciISjedi
             DodavanjeArtiklaForma dodavanje = new DodavanjeArtiklaForma();
             this.Hide();
             dodavanje.ShowDialog();
+        }
+
+        private void btnOdjava_Click(object sender, EventArgs e)
+        {
+            PocetnaForma pocetnaForma = new PocetnaForma();
+            this.Hide();
+            pocetnaForma.ShowDialog();
         }
     }
 }

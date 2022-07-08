@@ -102,7 +102,6 @@
             this.kolButton.TabIndex = 12;
             this.kolButton.Text = "Količina";
             this.kolButton.UseVisualStyleBackColor = true;
-            this.kolButton.Click += new System.EventHandler(this.kolButton_Click);
             // 
             // KosaricaForma
             // 

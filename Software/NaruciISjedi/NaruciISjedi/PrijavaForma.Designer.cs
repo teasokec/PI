@@ -70,18 +70,18 @@
             // 
             // tbKorIme
             // 
-            this.tbKorIme.Location = new System.Drawing.Point(146, 57);
+            this.tbKorIme.Location = new System.Drawing.Point(169, 60);
             this.tbKorIme.Margin = new System.Windows.Forms.Padding(2);
             this.tbKorIme.Name = "tbKorIme";
-            this.tbKorIme.Size = new System.Drawing.Size(76, 20);
+            this.tbKorIme.Size = new System.Drawing.Size(91, 20);
             this.tbKorIme.TabIndex = 3;
             // 
             // tbLozinka
             // 
-            this.tbLozinka.Location = new System.Drawing.Point(146, 108);
+            this.tbLozinka.Location = new System.Drawing.Point(169, 111);
             this.tbLozinka.Margin = new System.Windows.Forms.Padding(2);
             this.tbLozinka.Name = "tbLozinka";
-            this.tbLozinka.Size = new System.Drawing.Size(76, 20);
+            this.tbLozinka.Size = new System.Drawing.Size(91, 20);
             this.tbLozinka.TabIndex = 4;
             // 
             // btnRegistracija

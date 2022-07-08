@@ -35,24 +35,27 @@ namespace NaruciISjedi
         {
             string korIme = tbKorIme.Text;
             string lozinka = tbLozinka.Text;
-
-            AsortimanForma asortimanForma = new AsortimanForma();
-
+            bool pronadjen = true;
             using (var context = new PI2241_DBEntities1())
             {
-                var query = from u in context.Users
-                            where u.korisnickoIme == korIme && u.lozinka == lozinka
-                            select u;
-
-                if (query.Count() > 0)
+                foreach (var item in context.Users)
                 {
-                    this.Hide();
-                    asortimanForma.ShowDialog();
+                    if (item.korisnickoIme == korIme && item.lozinka == lozinka)
+                    {
+                        AsortimanForma asortimanForma = new AsortimanForma(item);
+                        this.Hide();
+                        asortimanForma.ShowDialog();
+                    }
+                    else
+                    {
+                        pronadjen = false;
+                    }
+                    
                 }
-                else
-                {
-                    MessageBox.Show("Krivo uneseni podaci!");
-                }
+            }
+            if (!pronadjen)
+            {
+                MessageBox.Show("Krivo uneseni podaci!");
             }
         }
     }

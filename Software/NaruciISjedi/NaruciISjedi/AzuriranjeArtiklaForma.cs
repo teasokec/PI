@@ -23,7 +23,7 @@ namespace NaruciISjedi
         private void btnOdustani_Click(object sender, EventArgs e)
         {
             this.Hide();
-            AsortimanForma asortimanForma = new AsortimanForma();
+            AsortimanForma asortimanForma = new AsortimanForma(null);
             asortimanForma.ShowDialog();
         }
 
@@ -46,7 +46,7 @@ namespace NaruciISjedi
                 context.SaveChanges();
             }
             Close();
-            AsortimanForma forma = new AsortimanForma();
+            AsortimanForma forma = new AsortimanForma(null);
             forma.ShowDialog();
         }
 

@@ -29,7 +29,7 @@ namespace NaruciISjedi
 
         private void vratiAsortimanButton_Click(object sender, EventArgs e)
         {
-            AsortimanForma form = new AsortimanForma();
+            AsortimanForma form = new AsortimanForma(null);
             this.Hide();
             form.ShowDialog();
         }
