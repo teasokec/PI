@@ -83,7 +83,7 @@ namespace NaruciISjedi
                 }
                 else
                 {
-                    MessageBox.Show("Test");
+                    MessageBox.Show("Neuspjesna registracija!");
                 }
                 
 
