@@ -50,22 +50,43 @@ namespace NaruciISjedi
                 var query = from u in context.Users
                             select u;
                 brojac = query.Count();
+                bool ispravno = true;
 
-                User user = new User()
+                foreach (var item in context.Users)
                 {
-                    korisnikID = brojac + 1,
-                    ime = ime,
-                    prezime = prezime,
-                    kontakt = kontakt,
-                    email = email,
-                    adresa = adresa,
-                    korisnickoIme = korIme,
-                    lozinka = lozinka,
-                    IDUloga = uloga + 1
-                };
+                    if (item.korisnickoIme == korIme || item.lozinka.Length < 8 || item.email == email)
+                    { 
+                        ispravno = false;
+                    }
+                    else
+                    {
+                        ispravno = true;
+                    }
+                }
+                if (ispravno)
+                {
+                    User user = new User()
+                    {
+                        korisnikID = brojac + 1,
+                        ime = ime,
+                        prezime = prezime,
+                        kontakt = kontakt,
+                        email = email,
+                        adresa = adresa,
+                        korisnickoIme = korIme,
+                        lozinka = lozinka,
+                        IDUloga = uloga + 1
+                    };
 
-                context.Users.Add(user);
-                context.SaveChanges();
+                    context.Users.Add(user);
+                    context.SaveChanges();
+                }
+                else
+                {
+                    MessageBox.Show("Test");
+                }
+                
+
             }
             PocetnaForma form = new PocetnaForma();
             this.Hide();
