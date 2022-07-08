@@ -100,6 +100,7 @@ namespace NaruciISjedi
 
         private void btnOdjava_Click(object sender, EventArgs e)
         {
+            korisnik = null;
             PocetnaForma pocetnaForma = new PocetnaForma();
             this.Hide();
             pocetnaForma.ShowDialog();

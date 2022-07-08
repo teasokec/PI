@@ -22,8 +22,8 @@ namespace NaruciISjedi
 
         private void btnOdustani_Click(object sender, EventArgs e)
         {
-            Close();
             AsortimanForma asortimanForma = new AsortimanForma(korisnik);
+            this.Hide();
             asortimanForma.ShowDialog();
         }
 
@@ -34,28 +34,36 @@ namespace NaruciISjedi
             string cijena = cijenaTextBox.Text;
             var vrsta = vrstaComboBox.SelectedIndex;
 
-            using (var context = new PI2241_DBEntities1())
+            if (naziv != "" && sastojci != "" && cijena != "" && vrsta != null)  
             {
-                var query = from p in context.Products
-                            select p;
-
-                int brojac = query.Count();
-
-                Product product = new Product
+                using (var context = new PI2241_DBEntities1())
                 {
-                    proizvodID = brojac + 1,
-                    naziv = naziv,
-                    sastojci = sastojci,
-                    cijenaProizvoda = float.Parse(cijena),
-                    IDVrsta = vrsta + 1,
-                };
+                    var query = from p in context.Products
+                                select p;
 
-                context.Products.Add(product);
-                context.SaveChanges();
+                    int brojac = query.Count();
+
+                    Product product = new Product
+                    {
+                        proizvodID = brojac + 1,
+                        naziv = naziv,
+                        sastojci = sastojci,
+                        cijenaProizvoda = float.Parse(cijena),
+                        IDVrsta = vrsta + 1,
+                    };
+
+                    context.Products.Add(product);
+                    context.SaveChanges();
+                }
+                Close();
+                AsortimanForma forma = new AsortimanForma(korisnik);
+                forma.ShowDialog();
             }
-            Close();
-            AsortimanForma forma = new AsortimanForma(korisnik);
-            forma.ShowDialog();
+            else
+            {
+                MessageBox.Show("Popunite sva polja!");
+            }
+            
         }
 
         private void DodavanjeArtiklaForma_Load(object sender, EventArgs e)
