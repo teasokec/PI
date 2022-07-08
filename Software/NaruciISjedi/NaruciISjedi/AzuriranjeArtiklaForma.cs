@@ -13,17 +13,19 @@ namespace NaruciISjedi
     public partial class AzuriranjeArtiklaForma : Form
     {
         private Product selektirani;
+        private User korisnik;
 
-        public AzuriranjeArtiklaForma(Product izabrani)
+        public AzuriranjeArtiklaForma(Product izabrani, User user)
         {
             InitializeComponent();
             selektirani = izabrani;
+            korisnik = user;
         }
 
         private void btnOdustani_Click(object sender, EventArgs e)
         {
             this.Hide();
-            AsortimanForma asortimanForma = new AsortimanForma(null);
+            AsortimanForma asortimanForma = new AsortimanForma(korisnik);
             asortimanForma.ShowDialog();
         }
 
@@ -46,7 +48,7 @@ namespace NaruciISjedi
                 context.SaveChanges();
             }
             Close();
-            AsortimanForma forma = new AsortimanForma(null);
+            AsortimanForma forma = new AsortimanForma(korisnik);
             forma.ShowDialog();
         }
 

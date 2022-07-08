@@ -62,7 +62,7 @@ namespace NaruciISjedi
 
         private void kreirajIzvjesceButton_Click(object sender, EventArgs e)
         {
-            IzradaIzvjescaForma forma = new IzradaIzvjescaForma();
+            IzradaIzvjescaForma forma = new IzradaIzvjescaForma(korisnik);
             this.Hide();
             forma.ShowDialog();
         }
@@ -86,14 +86,14 @@ namespace NaruciISjedi
         {
             Product selektirani = dgvProizvodi.CurrentRow.DataBoundItem as Product;
 
-            AzuriranjeArtiklaForma azuriranje = new AzuriranjeArtiklaForma(selektirani);
+            AzuriranjeArtiklaForma azuriranje = new AzuriranjeArtiklaForma(selektirani, korisnik);
             this.Hide();
             azuriranje.ShowDialog();
         }
 
         private void btnDodaj_Click(object sender, EventArgs e)
         {
-            DodavanjeArtiklaForma dodavanje = new DodavanjeArtiklaForma();
+            DodavanjeArtiklaForma dodavanje = new DodavanjeArtiklaForma(korisnik);
             this.Hide();
             dodavanje.ShowDialog();
         }

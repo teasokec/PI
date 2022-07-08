@@ -12,15 +12,18 @@ namespace NaruciISjedi
 {
     public partial class DodavanjeArtiklaForma : Form
     {
-        public DodavanjeArtiklaForma()
+        private User korisnik;
+
+        public DodavanjeArtiklaForma(User user)
         {
             InitializeComponent();
+            korisnik = user;
         }
 
         private void btnOdustani_Click(object sender, EventArgs e)
         {
             Close();
-            AsortimanForma asortimanForma = new AsortimanForma(null);
+            AsortimanForma asortimanForma = new AsortimanForma(korisnik);
             asortimanForma.ShowDialog();
         }
 
@@ -51,7 +54,7 @@ namespace NaruciISjedi
                 context.SaveChanges();
             }
             Close();
-            AsortimanForma forma = new AsortimanForma(null);
+            AsortimanForma forma = new AsortimanForma(korisnik);
             forma.ShowDialog();
         }
 
