@@ -34,7 +34,7 @@ namespace NaruciISjedi
             string cijena = cijenaTextBox.Text;
             var vrsta = vrstaComboBox.SelectedIndex;
 
-            if (naziv != "" && sastojci != "" && cijena != "" && vrsta != null)  
+            if (naziv != "" && sastojci != "" && cijena != "")  
             {
                 using (var context = new PI2241_DBEntities1())
                 {

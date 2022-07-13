@@ -23,7 +23,7 @@ namespace NaruciISjedi
 
         private void AsortimanForma_Load(object sender, EventArgs e)
         {
-            if (korisnik == null)
+            if (korisnik.IDUloga == 4)
             {
                 OsvjeziPrikaz();
                 kreirajIzvjesceButton.Visible = false;
