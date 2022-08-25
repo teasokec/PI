@@ -12,21 +12,24 @@ namespace NaruciISjedi
 {
     public partial class IzradaIzvjescaForma : Form
     {
-        public IzradaIzvjescaForma()
+        private User korisnik;
+
+        public IzradaIzvjescaForma(User user)
         {
             InitializeComponent();
+            korisnik = user;
         }
 
         private void vratiAsortimanButton_Click(object sender, EventArgs e)
         {
-            AsortimanForma form = new AsortimanForma();
+            AsortimanForma form = new AsortimanForma(korisnik);
             this.Hide();
             form.ShowDialog();
         }
 
         private void prikaziIzvjesceButton_Click(object sender, EventArgs e)
         {
-            IspisIzvjescaForma form = new IspisIzvjescaForma();
+            IspisIzvjescaForma form = new IspisIzvjescaForma(korisnik);
             this.Hide();
             form.ShowDialog();
         }

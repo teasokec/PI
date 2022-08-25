@@ -68,18 +68,32 @@
             // 
             // tbKorIme
             // 
+<<<<<<< HEAD
             this.tbKorIme.Location = new System.Drawing.Point(195, 70);
             this.tbKorIme.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbKorIme.Name = "tbKorIme";
             this.tbKorIme.Size = new System.Drawing.Size(100, 22);
+=======
+            this.tbKorIme.Location = new System.Drawing.Point(169, 60);
+            this.tbKorIme.Margin = new System.Windows.Forms.Padding(2);
+            this.tbKorIme.Name = "tbKorIme";
+            this.tbKorIme.Size = new System.Drawing.Size(91, 20);
+>>>>>>> fea7f4f0c6d66805d9aa77272a62a13a5f4df547
             this.tbKorIme.TabIndex = 3;
             // 
             // tbLozinka
             // 
+<<<<<<< HEAD
             this.tbLozinka.Location = new System.Drawing.Point(195, 133);
             this.tbLozinka.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbLozinka.Name = "tbLozinka";
             this.tbLozinka.Size = new System.Drawing.Size(100, 22);
+=======
+            this.tbLozinka.Location = new System.Drawing.Point(169, 111);
+            this.tbLozinka.Margin = new System.Windows.Forms.Padding(2);
+            this.tbLozinka.Name = "tbLozinka";
+            this.tbLozinka.Size = new System.Drawing.Size(91, 20);
+>>>>>>> fea7f4f0c6d66805d9aa77272a62a13a5f4df547
             this.tbLozinka.TabIndex = 4;
             // 
             // btnRegistracija

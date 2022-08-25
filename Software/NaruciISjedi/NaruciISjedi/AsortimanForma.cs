@@ -12,22 +12,43 @@ namespace NaruciISjedi
 {
     public partial class AsortimanForma : Form
     {
-        
-        
+        private Product izabraniProizvod;
+        private User korisnik;
 
-        public AsortimanForma()
+        public AsortimanForma(User user)
         {
             InitializeComponent();
+            korisnik = user;
         }
 
         private void AsortimanForma_Load(object sender, EventArgs e)
         {
-            OsvjeziPrikaz();
+            if (korisnik.IDUloga == 4)
+            {
+                OsvjeziPrikaz();
+                kreirajIzvjesceButton.Visible = false;
+                btnArtikl.Visible = false;
+                btnDodaj.Visible = false;
+                btnOdjava.Visible = false;
+            }
+ 
+            else if (korisnik.IDUloga != 4)
+            {
+                OsvjeziPrikaz();
+                kreirajIzvjesceButton.Visible = true;
+                btnArtikl.Visible = true;
+                btnDodaj.Visible = true;
+                btnOdjava.Visible = true;
+            }
+            else
+            {
+                btnOdjava.Visible = true;
+            }
         }
 
         private void OsvjeziPrikaz()
         {
-            using (var context = new baza_podataka())
+            using (var context = new PI2241_DBEntities1())
             {
                 var query = from p in context.Products.Include("Orders").Include("Type")
                             select p;
@@ -39,7 +60,7 @@ namespace NaruciISjedi
 
         private void kreirajIzvjesceButton_Click(object sender, EventArgs e)
         {
-            IzradaIzvjescaForma forma = new IzradaIzvjescaForma();
+            IzradaIzvjescaForma forma = new IzradaIzvjescaForma(korisnik);
             this.Hide();
             forma.ShowDialog();
         }
@@ -53,6 +74,34 @@ namespace NaruciISjedi
             forma.ShowDialog();
         }
         
-        
+        public Product OdabraniProizvod()
+        {
+            izabraniProizvod = dgvProizvodi.CurrentRow.DataBoundItem as Product;
+            return izabraniProizvod;
+        }
+
+        private void btnArtikl_Click(object sender, EventArgs e)
+        {
+            Product selektirani = dgvProizvodi.CurrentRow.DataBoundItem as Product;
+
+            AzuriranjeArtiklaForma azuriranje = new AzuriranjeArtiklaForma(selektirani, korisnik);
+            this.Hide();
+            azuriranje.ShowDialog();
+        }
+
+        private void btnDodaj_Click(object sender, EventArgs e)
+        {
+            DodavanjeArtiklaForma dodavanje = new DodavanjeArtiklaForma(korisnik);
+            this.Hide();
+            dodavanje.ShowDialog();
+        }
+
+        private void btnOdjava_Click(object sender, EventArgs e)
+        {
+            korisnik = null;
+            PocetnaForma pocetnaForma = new PocetnaForma();
+            this.Hide();
+            pocetnaForma.ShowDialog();
+        }
     }
 }
