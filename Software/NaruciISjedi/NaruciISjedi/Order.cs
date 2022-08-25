@@ -23,7 +23,7 @@ namespace NaruciISjedi
         public int narudzbaID { get; set; }
         public Nullable<int> IDKorisnik { get; set; }
         public Nullable<int> kolicina { get; set; }
-        public Nullable<int> IDProizovd { get; set; }
+        public Nullable<int> IDProizvod { get; set; }
         public Nullable<System.DateTime> vrijemeDostave { get; set; }
         public Nullable<double> ukupnaCijena { get; set; }
         public string adresaDostave { get; set; }

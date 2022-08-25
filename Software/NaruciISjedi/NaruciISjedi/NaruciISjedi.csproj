@@ -107,7 +107,7 @@
       <DependentUpon>NeuspjesnaPrijavaForma.cs</DependentUpon>
     </Compile>
     <Compile Include="Order.cs">
-      <DependentUpon>NaruciISjediModel.tt</DependentUpon>
+      <DependentUpon>Slastice.tt</DependentUpon>
     </Compile>
     <Compile Include="PrijavaForma.cs">
       <SubType>Form</SubType>
@@ -117,7 +117,7 @@
     </Compile>
     <Compile Include="Product.code.cs" />
     <Compile Include="Product.cs">
-      <DependentUpon>NaruciISjediModel.tt</DependentUpon>
+      <DependentUpon>Slastice.tt</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -128,16 +128,34 @@
       <DependentUpon>RegistracijaForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Report.cs">
-      <DependentUpon>NaruciISjediModel.tt</DependentUpon>
+      <DependentUpon>Slastice.tt</DependentUpon>
     </Compile>
     <Compile Include="Role.cs">
-      <DependentUpon>NaruciISjediModel.tt</DependentUpon>
+      <DependentUpon>Slastice.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Slastice.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Slastice.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Slastice.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Slastice.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Slastice.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Slastice.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="sysdiagram.cs">
+      <DependentUpon>Slastice.tt</DependentUpon>
     </Compile>
     <Compile Include="Type.cs">
-      <DependentUpon>NaruciISjediModel.tt</DependentUpon>
+      <DependentUpon>Slastice.tt</DependentUpon>
     </Compile>
     <Compile Include="User.cs">
-      <DependentUpon>NaruciISjediModel.tt</DependentUpon>
+      <DependentUpon>Slastice.tt</DependentUpon>
     </Compile>
     <EmbeddedResource Include="AsortimanForma.resx">
       <DependentUpon>AsortimanForma.cs</DependentUpon>
@@ -196,6 +214,13 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <EntityDeploy Include="Slastice.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Slastice.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Slastice.edmx.diagram">
+      <DependentUpon>Slastice.edmx</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -210,6 +235,16 @@
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>NaruciISjediModel.edmx</DependentUpon>
       <LastGenOutput>NaruciISjediModel.cs</LastGenOutput>
+    </Content>
+    <Content Include="Slastice.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Slastice.edmx</DependentUpon>
+      <LastGenOutput>Slastice.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Slastice.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Slastice.edmx</DependentUpon>
+      <LastGenOutput>Slastice.cs</LastGenOutput>
     </Content>
     <None Include="Resources\256x256bb.jpg" />
     <None Include="Resources\cookies-dessert-sweet-dessert-wallpaper-preview.jpg" />

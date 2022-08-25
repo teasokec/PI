@@ -22,13 +22,14 @@ namespace NaruciISjedi
         }
     
         public int korisnikID { get; set; }
-        public Nullable<int> IDUloga { get; set; }
         public string ime { get; set; }
         public string prezime { get; set; }
-        public string adresa { get; set; }
-        public string kontakt { get; set; }
+        public string email { get; set; }
         public string korisnickoIme { get; set; }
         public string lozinka { get; set; }
+        public string adresa { get; set; }
+        public string kontakt { get; set; }
+        public Nullable<int> IDUloga { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Order> Orders { get; set; }

@@ -28,19 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.kosaricaButton = new System.Windows.Forms.Button();
             this.dgvProizvodi = new System.Windows.Forms.DataGridView();
             this.kreirajIzvjesceButton = new System.Windows.Forms.Button();
-            this.productBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.userBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.typeBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.orderBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dgvProizvodi)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.userBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.typeBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.orderBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // kosaricaButton
@@ -78,22 +69,6 @@
             this.kreirajIzvjesceButton.UseVisualStyleBackColor = true;
             this.kreirajIzvjesceButton.Click += new System.EventHandler(this.kreirajIzvjesceButton_Click);
             // 
-            // productBindingSource
-            // 
-            this.productBindingSource.DataSource = typeof(NaruciISjedi.Product);
-            // 
-            // userBindingSource
-            // 
-            this.userBindingSource.DataSource = typeof(NaruciISjedi.User);
-            // 
-            // typeBindingSource
-            // 
-            this.typeBindingSource.DataSource = typeof(NaruciISjedi.Type);
-            // 
-            // orderBindingSource
-            // 
-            this.orderBindingSource.DataSource = typeof(NaruciISjedi.Order);
-            // 
             // AsortimanForma
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -108,10 +83,6 @@
             this.Text = "AsortimanForma";
             this.Load += new System.EventHandler(this.AsortimanForma_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvProizvodi)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.userBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.typeBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.orderBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -121,9 +92,5 @@
         private System.Windows.Forms.Button kosaricaButton;
         private System.Windows.Forms.DataGridView dgvProizvodi;
         private System.Windows.Forms.Button kreirajIzvjesceButton;
-        private System.Windows.Forms.BindingSource userBindingSource;
-        private System.Windows.Forms.BindingSource productBindingSource;
-        private System.Windows.Forms.BindingSource typeBindingSource;
-        private System.Windows.Forms.BindingSource orderBindingSource;
     }
 }

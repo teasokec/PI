@@ -55,5 +55,10 @@ namespace NaruciISjedi
                 }
             }
         }
+
+        private void PrijavaForma_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
