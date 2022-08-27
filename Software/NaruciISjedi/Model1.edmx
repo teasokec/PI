@@ -1,0 +1,451 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="PI2241_DBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Order">
+          <Key>
+            <PropertyRef Name="narudzbaID" />
+          </Key>
+          <Property Name="narudzbaID" Type="int" Nullable="false" />
+          <Property Name="IDKorisnik" Type="int" />
+          <Property Name="kolicina" Type="int" />
+          <Property Name="IDProizvod" Type="int" />
+          <Property Name="vrijemeDostave" Type="datetime" />
+          <Property Name="ukupnaCijena" Type="float" />
+          <Property Name="adresaDostave" Type="varchar" MaxLength="50" />
+          <Property Name="kontakt" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Product">
+          <Key>
+            <PropertyRef Name="proizvodID" />
+          </Key>
+          <Property Name="proizvodID" Type="int" Nullable="false" />
+          <Property Name="naziv" Type="varchar" MaxLength="50" />
+          <Property Name="sastojci" Type="text" />
+          <Property Name="cijenaProizvoda" Type="float" />
+          <Property Name="slikaProizvoda" Type="varchar" MaxLength="500" />
+          <Property Name="IDVrsta" Type="int" />
+        </EntityType>
+        <EntityType Name="Report">
+          <Key>
+            <PropertyRef Name="izvjesceID" />
+          </Key>
+          <Property Name="izvjesceID" Type="int" Nullable="false" />
+          <Property Name="IDKorisnik" Type="int" />
+          <Property Name="IDNarudzba" Type="int" />
+          <Property Name="datumIzrade" Type="datetime" />
+        </EntityType>
+        <EntityType Name="Role">
+          <Key>
+            <PropertyRef Name="ulogaID" />
+          </Key>
+          <Property Name="ulogaID" Type="int" Nullable="false" />
+          <Property Name="naziv" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Type">
+          <Key>
+            <PropertyRef Name="vrstaID" />
+          </Key>
+          <Property Name="vrstaID" Type="int" Nullable="false" />
+          <Property Name="naziv" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="User">
+          <Key>
+            <PropertyRef Name="korisnikID" />
+          </Key>
+          <Property Name="korisnikID" Type="int" Nullable="false" />
+          <Property Name="ime" Type="varchar" MaxLength="50" />
+          <Property Name="prezime" Type="varchar" MaxLength="50" />
+          <Property Name="email" Type="varchar" MaxLength="50" />
+          <Property Name="korisnickoIme" Type="varchar" MaxLength="50" />
+          <Property Name="lozinka" Type="char" MaxLength="10" />
+          <Property Name="adresa" Type="varchar" MaxLength="50" />
+          <Property Name="kontakt" Type="varchar" MaxLength="50" />
+          <Property Name="IDUloga" Type="int" />
+        </EntityType>
+        <Association Name="FK_Order_Product">
+          <End Role="Product" Type="Self.Product" Multiplicity="0..1" />
+          <End Role="Order" Type="Self.Order" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Product">
+              <PropertyRef Name="proizvodID" />
+            </Principal>
+            <Dependent Role="Order">
+              <PropertyRef Name="IDProizvod" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Order_User">
+          <End Role="User" Type="Self.User" Multiplicity="0..1" />
+          <End Role="Order" Type="Self.Order" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="korisnikID" />
+            </Principal>
+            <Dependent Role="Order">
+              <PropertyRef Name="IDKorisnik" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Product_Product">
+          <End Role="Type" Type="Self.Type" Multiplicity="0..1" />
+          <End Role="Product" Type="Self.Product" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Type">
+              <PropertyRef Name="vrstaID" />
+            </Principal>
+            <Dependent Role="Product">
+              <PropertyRef Name="IDVrsta" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Report_Order">
+          <End Role="Order" Type="Self.Order" Multiplicity="0..1" />
+          <End Role="Report" Type="Self.Report" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Order">
+              <PropertyRef Name="narudzbaID" />
+            </Principal>
+            <Dependent Role="Report">
+              <PropertyRef Name="IDNarudzba" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Report_User">
+          <End Role="User" Type="Self.User" Multiplicity="0..1" />
+          <End Role="Report" Type="Self.Report" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="korisnikID" />
+            </Principal>
+            <Dependent Role="Report">
+              <PropertyRef Name="IDKorisnik" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_User_Role">
+          <End Role="Role" Type="Self.Role" Multiplicity="0..1" />
+          <End Role="User" Type="Self.User" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Role">
+              <PropertyRef Name="ulogaID" />
+            </Principal>
+            <Dependent Role="User">
+              <PropertyRef Name="IDUloga" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="PI2241_DBModelStoreContainer">
+          <EntitySet Name="Order" EntityType="Self.Order" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Product" EntityType="Self.Product" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Report" EntityType="Self.Report" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Role" EntityType="Self.Role" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Type" EntityType="Self.Type" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="User" EntityType="Self.User" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_Order_Product" Association="Self.FK_Order_Product">
+            <End Role="Product" EntitySet="Product" />
+            <End Role="Order" EntitySet="Order" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Order_User" Association="Self.FK_Order_User">
+            <End Role="User" EntitySet="User" />
+            <End Role="Order" EntitySet="Order" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Product_Product" Association="Self.FK_Product_Product">
+            <End Role="Type" EntitySet="Type" />
+            <End Role="Product" EntitySet="Product" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Report_Order" Association="Self.FK_Report_Order">
+            <End Role="Order" EntitySet="Order" />
+            <End Role="Report" EntitySet="Report" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Report_User" Association="Self.FK_Report_User">
+            <End Role="User" EntitySet="User" />
+            <End Role="Report" EntitySet="Report" />
+          </AssociationSet>
+          <AssociationSet Name="FK_User_Role" Association="Self.FK_User_Role">
+            <End Role="Role" EntitySet="Role" />
+            <End Role="User" EntitySet="User" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="PI2241_DBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Order">
+          <Key>
+            <PropertyRef Name="narudzbaID" />
+          </Key>
+          <Property Name="narudzbaID" Type="Int32" Nullable="false" />
+          <Property Name="IDKorisnik" Type="Int32" />
+          <Property Name="kolicina" Type="Int32" />
+          <Property Name="IDProizvod" Type="Int32" />
+          <Property Name="vrijemeDostave" Type="DateTime" Precision="3" />
+          <Property Name="ukupnaCijena" Type="Double" />
+          <Property Name="adresaDostave" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="kontakt" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Product" Relationship="Self.FK_Order_Product" FromRole="Order" ToRole="Product" />
+          <NavigationProperty Name="User" Relationship="Self.FK_Order_User" FromRole="Order" ToRole="User" />
+          <NavigationProperty Name="Reports" Relationship="Self.FK_Report_Order" FromRole="Order" ToRole="Report" />
+        </EntityType>
+        <EntityType Name="Product">
+          <Key>
+            <PropertyRef Name="proizvodID" />
+          </Key>
+          <Property Name="proizvodID" Type="Int32" Nullable="false" />
+          <Property Name="naziv" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="sastojci" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="cijenaProizvoda" Type="Double" />
+          <Property Name="slikaProizvoda" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="IDVrsta" Type="Int32" />
+          <NavigationProperty Name="Orders" Relationship="Self.FK_Order_Product" FromRole="Product" ToRole="Order" />
+          <NavigationProperty Name="Type" Relationship="Self.FK_Product_Product" FromRole="Product" ToRole="Type" />
+        </EntityType>
+        <EntityType Name="Report">
+          <Key>
+            <PropertyRef Name="izvjesceID" />
+          </Key>
+          <Property Name="izvjesceID" Type="Int32" Nullable="false" />
+          <Property Name="IDKorisnik" Type="Int32" />
+          <Property Name="IDNarudzba" Type="Int32" />
+          <Property Name="datumIzrade" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="Order" Relationship="Self.FK_Report_Order" FromRole="Report" ToRole="Order" />
+          <NavigationProperty Name="User" Relationship="Self.FK_Report_User" FromRole="Report" ToRole="User" />
+        </EntityType>
+        <EntityType Name="Role">
+          <Key>
+            <PropertyRef Name="ulogaID" />
+          </Key>
+          <Property Name="ulogaID" Type="Int32" Nullable="false" />
+          <Property Name="naziv" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Users" Relationship="Self.FK_User_Role" FromRole="Role" ToRole="User" />
+        </EntityType>
+        <EntityType Name="Type">
+          <Key>
+            <PropertyRef Name="vrstaID" />
+          </Key>
+          <Property Name="vrstaID" Type="Int32" Nullable="false" />
+          <Property Name="naziv" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Products" Relationship="Self.FK_Product_Product" FromRole="Type" ToRole="Product" />
+        </EntityType>
+        <EntityType Name="User">
+          <Key>
+            <PropertyRef Name="korisnikID" />
+          </Key>
+          <Property Name="korisnikID" Type="Int32" Nullable="false" />
+          <Property Name="ime" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="prezime" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="korisnickoIme" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="lozinka" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="adresa" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="kontakt" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="IDUloga" Type="Int32" />
+          <NavigationProperty Name="Orders" Relationship="Self.FK_Order_User" FromRole="User" ToRole="Order" />
+          <NavigationProperty Name="Reports" Relationship="Self.FK_Report_User" FromRole="User" ToRole="Report" />
+          <NavigationProperty Name="Role" Relationship="Self.FK_User_Role" FromRole="User" ToRole="Role" />
+        </EntityType>
+        <Association Name="FK_Order_Product">
+          <End Role="Product" Type="Self.Product" Multiplicity="0..1" />
+          <End Role="Order" Type="Self.Order" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Product">
+              <PropertyRef Name="proizvodID" />
+            </Principal>
+            <Dependent Role="Order">
+              <PropertyRef Name="IDProizvod" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Order_User">
+          <End Role="User" Type="Self.User" Multiplicity="0..1" />
+          <End Role="Order" Type="Self.Order" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="korisnikID" />
+            </Principal>
+            <Dependent Role="Order">
+              <PropertyRef Name="IDKorisnik" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Report_Order">
+          <End Role="Order" Type="Self.Order" Multiplicity="0..1" />
+          <End Role="Report" Type="Self.Report" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Order">
+              <PropertyRef Name="narudzbaID" />
+            </Principal>
+            <Dependent Role="Report">
+              <PropertyRef Name="IDNarudzba" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Product_Product">
+          <End Role="Type" Type="Self.Type" Multiplicity="0..1" />
+          <End Role="Product" Type="Self.Product" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Type">
+              <PropertyRef Name="vrstaID" />
+            </Principal>
+            <Dependent Role="Product">
+              <PropertyRef Name="IDVrsta" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Report_User">
+          <End Role="User" Type="Self.User" Multiplicity="0..1" />
+          <End Role="Report" Type="Self.Report" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="korisnikID" />
+            </Principal>
+            <Dependent Role="Report">
+              <PropertyRef Name="IDKorisnik" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_User_Role">
+          <End Role="Role" Type="Self.Role" Multiplicity="0..1" />
+          <End Role="User" Type="Self.User" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Role">
+              <PropertyRef Name="ulogaID" />
+            </Principal>
+            <Dependent Role="User">
+              <PropertyRef Name="IDUloga" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="PI2241_DBEntities1" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Orders" EntityType="Self.Order" />
+          <EntitySet Name="Products" EntityType="Self.Product" />
+          <EntitySet Name="Reports" EntityType="Self.Report" />
+          <EntitySet Name="Roles" EntityType="Self.Role" />
+          <EntitySet Name="Types" EntityType="Self.Type" />
+          <EntitySet Name="Users" EntityType="Self.User" />
+          <AssociationSet Name="FK_Order_Product" Association="Self.FK_Order_Product">
+            <End Role="Product" EntitySet="Products" />
+            <End Role="Order" EntitySet="Orders" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Order_User" Association="Self.FK_Order_User">
+            <End Role="User" EntitySet="Users" />
+            <End Role="Order" EntitySet="Orders" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Report_Order" Association="Self.FK_Report_Order">
+            <End Role="Order" EntitySet="Orders" />
+            <End Role="Report" EntitySet="Reports" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Product_Product" Association="Self.FK_Product_Product">
+            <End Role="Type" EntitySet="Types" />
+            <End Role="Product" EntitySet="Products" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Report_User" Association="Self.FK_Report_User">
+            <End Role="User" EntitySet="Users" />
+            <End Role="Report" EntitySet="Reports" />
+          </AssociationSet>
+          <AssociationSet Name="FK_User_Role" Association="Self.FK_User_Role">
+            <End Role="Role" EntitySet="Roles" />
+            <End Role="User" EntitySet="Users" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="PI2241_DBModelStoreContainer" CdmEntityContainer="PI2241_DBEntities1">
+          <EntitySetMapping Name="Orders">
+            <EntityTypeMapping TypeName="PI2241_DBModel.Order">
+              <MappingFragment StoreEntitySet="Order">
+                <ScalarProperty Name="narudzbaID" ColumnName="narudzbaID" />
+                <ScalarProperty Name="IDKorisnik" ColumnName="IDKorisnik" />
+                <ScalarProperty Name="kolicina" ColumnName="kolicina" />
+                <ScalarProperty Name="IDProizvod" ColumnName="IDProizvod" />
+                <ScalarProperty Name="vrijemeDostave" ColumnName="vrijemeDostave" />
+                <ScalarProperty Name="ukupnaCijena" ColumnName="ukupnaCijena" />
+                <ScalarProperty Name="adresaDostave" ColumnName="adresaDostave" />
+                <ScalarProperty Name="kontakt" ColumnName="kontakt" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Products">
+            <EntityTypeMapping TypeName="PI2241_DBModel.Product">
+              <MappingFragment StoreEntitySet="Product">
+                <ScalarProperty Name="proizvodID" ColumnName="proizvodID" />
+                <ScalarProperty Name="naziv" ColumnName="naziv" />
+                <ScalarProperty Name="sastojci" ColumnName="sastojci" />
+                <ScalarProperty Name="cijenaProizvoda" ColumnName="cijenaProizvoda" />
+                <ScalarProperty Name="slikaProizvoda" ColumnName="slikaProizvoda" />
+                <ScalarProperty Name="IDVrsta" ColumnName="IDVrsta" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Reports">
+            <EntityTypeMapping TypeName="PI2241_DBModel.Report">
+              <MappingFragment StoreEntitySet="Report">
+                <ScalarProperty Name="izvjesceID" ColumnName="izvjesceID" />
+                <ScalarProperty Name="IDKorisnik" ColumnName="IDKorisnik" />
+                <ScalarProperty Name="IDNarudzba" ColumnName="IDNarudzba" />
+                <ScalarProperty Name="datumIzrade" ColumnName="datumIzrade" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Roles">
+            <EntityTypeMapping TypeName="PI2241_DBModel.Role">
+              <MappingFragment StoreEntitySet="Role">
+                <ScalarProperty Name="ulogaID" ColumnName="ulogaID" />
+                <ScalarProperty Name="naziv" ColumnName="naziv" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Types">
+            <EntityTypeMapping TypeName="PI2241_DBModel.Type">
+              <MappingFragment StoreEntitySet="Type">
+                <ScalarProperty Name="vrstaID" ColumnName="vrstaID" />
+                <ScalarProperty Name="naziv" ColumnName="naziv" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Users">
+            <EntityTypeMapping TypeName="PI2241_DBModel.User">
+              <MappingFragment StoreEntitySet="User">
+                <ScalarProperty Name="korisnikID" ColumnName="korisnikID" />
+                <ScalarProperty Name="ime" ColumnName="ime" />
+                <ScalarProperty Name="prezime" ColumnName="prezime" />
+                <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="korisnickoIme" ColumnName="korisnickoIme" />
+                <ScalarProperty Name="lozinka" ColumnName="lozinka" />
+                <ScalarProperty Name="adresa" ColumnName="adresa" />
+                <ScalarProperty Name="kontakt" ColumnName="kontakt" />
+                <ScalarProperty Name="IDUloga" ColumnName="IDUloga" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
