@@ -1,0 +1,48 @@
+C:\Users\teaso\Desktop\Projekt\Software\NaruciISjedi\NaruciISjedi\bin\Debug\NaruciISjedi.exe.config
+C:\Users\teaso\Desktop\Projekt\Software\NaruciISjedi\NaruciISjedi\bin\Debug\NaruciISjedi.exe
+C:\Users\teaso\Desktop\Projekt\Software\NaruciISjedi\NaruciISjedi\bin\Debug\NaruciISjedi.pdb
+C:\Users\teaso\Desktop\Projekt\Software\NaruciISjedi\NaruciISjedi\bin\Debug\EntityFramework.dll
+C:\Users\teaso\Desktop\Projekt\Software\NaruciISjedi\NaruciISjedi\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\teaso\Desktop\Projekt\Software\NaruciISjedi\NaruciISjedi\bin\Debug\EntityFramework.xml
+C:\Users\teaso\Desktop\Projekt\Software\NaruciISjedi\NaruciISjedi\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\teaso\Desktop\Projekt\Software\NaruciISjedi\NaruciISjedi\obj\Debug\NaruciISjedi.csproj.AssemblyReference.cache
+C:\Users\teaso\Desktop\Projekt\Software\NaruciISjedi\NaruciISjedi\obj\Debug\NaruciISjedi.csproj.SuggestedBindingRedirects.cache
+C:\Users\teaso\Desktop\Projekt\Software\NaruciISjedi\NaruciISjedi\obj\Debug\NaruciISjedi.AsortimanForma.resources
+C:\Users\teaso\Desktop\Projekt\Software\NaruciISjedi\NaruciISjedi\obj\Debug\NaruciISjedi.PocetnaForma.resources
+C:\Users\teaso\Desktop\Projekt\Software\NaruciISjedi\NaruciISjedi\obj\Debug\NaruciISjedi.IspisIzvjescaForma.resources
+C:\Users\teaso\Desktop\Projekt\Software\NaruciISjedi\NaruciISjedi\obj\Debug\NaruciISjedi.IzradaIzvjescaForma.resources
+C:\Users\teaso\Desktop\Projekt\Software\NaruciISjedi\NaruciISjedi\obj\Debug\NaruciISjedi.KosaricaForma.resources
+C:\Users\teaso\Desktop\Projekt\Software\NaruciISjedi\NaruciISjedi\obj\Debug\NaruciISjedi.PrijavaForma.resources
+C:\Users\teaso\Desktop\Projekt\Software\NaruciISjedi\NaruciISjedi\obj\Debug\NaruciISjedi.Properties.Resources.resources
+C:\Users\teaso\Desktop\Projekt\Software\NaruciISjedi\NaruciISjedi\obj\Debug\NaruciISjedi.RegistracijaForm.resources
+C:\Users\teaso\Desktop\Projekt\Software\NaruciISjedi\NaruciISjedi\obj\Debug\NaruciISjedi.csproj.GenerateResource.cache
+C:\Users\teaso\Desktop\Projekt\Software\NaruciISjedi\NaruciISjedi\obj\Debug\NaruciISjedi.csproj.CoreCompileInputs.cache
+C:\Users\teaso\Desktop\Projekt\Software\NaruciISjedi\NaruciISjedi\obj\Debug\NaruciISjedi.csproj.CopyComplete
+C:\Users\teaso\Desktop\Projekt\Software\NaruciISjedi\NaruciISjedi\obj\Debug\NaruciISjedi.exe
+C:\Users\teaso\Desktop\Projekt\Software\NaruciISjedi\NaruciISjedi\obj\Debug\NaruciISjedi.pdb
+C:\Users\teaso\Desktop\Projekt\Software\NaruciISjedi\NaruciISjedi\obj\Debug\NaruciISjedi.AzuriranjeArtiklaForma.resources
+C:\Users\teaso\Desktop\Projekt\Software\NaruciISjedi\NaruciISjedi\obj\Debug\NaruciISjedi.DodavanjeArtiklaForma.resources
+C:\Users\Korisnik\source\repos\Projekt (1)\Projekt\Software\NaruciISjedi\NaruciISjedi\obj\Debug\NaruciISjedi.csproj.AssemblyReference.cache
+C:\Users\Korisnik\source\repos\Projekt (1)\Projekt\Software\NaruciISjedi\NaruciISjedi\obj\Debug\NaruciISjedi.csproj.SuggestedBindingRedirects.cache
+C:\Users\Korisnik\source\repos\Projekt (1)\Projekt\Software\NaruciISjedi\NaruciISjedi\obj\Debug\NaruciISjedi.AsortimanForma.resources
+C:\Users\Korisnik\source\repos\Projekt (1)\Projekt\Software\NaruciISjedi\NaruciISjedi\obj\Debug\NaruciISjedi.AzuriranjeArtiklaForma.resources
+C:\Users\Korisnik\source\repos\Projekt (1)\Projekt\Software\NaruciISjedi\NaruciISjedi\obj\Debug\NaruciISjedi.PocetnaForma.resources
+C:\Users\Korisnik\source\repos\Projekt (1)\Projekt\Software\NaruciISjedi\NaruciISjedi\obj\Debug\NaruciISjedi.IspisIzvjescaForma.resources
+C:\Users\Korisnik\source\repos\Projekt (1)\Projekt\Software\NaruciISjedi\NaruciISjedi\obj\Debug\NaruciISjedi.IzradaIzvjescaForma.resources
+C:\Users\Korisnik\source\repos\Projekt (1)\Projekt\Software\NaruciISjedi\NaruciISjedi\obj\Debug\NaruciISjedi.KosaricaForma.resources
+C:\Users\Korisnik\source\repos\Projekt (1)\Projekt\Software\NaruciISjedi\NaruciISjedi\obj\Debug\NaruciISjedi.PrijavaForma.resources
+C:\Users\Korisnik\source\repos\Projekt (1)\Projekt\Software\NaruciISjedi\NaruciISjedi\obj\Debug\NaruciISjedi.Properties.Resources.resources
+C:\Users\Korisnik\source\repos\Projekt (1)\Projekt\Software\NaruciISjedi\NaruciISjedi\obj\Debug\NaruciISjedi.RegistracijaForm.resources
+C:\Users\Korisnik\source\repos\Projekt (1)\Projekt\Software\NaruciISjedi\NaruciISjedi\obj\Debug\NaruciISjedi.csproj.GenerateResource.cache
+C:\Users\Korisnik\source\repos\Projekt (1)\Projekt\Software\NaruciISjedi\NaruciISjedi\obj\Debug\NaruciISjedi.csproj.CoreCompileInputs.cache
+C:\Users\Korisnik\source\repos\Projekt (1)\Projekt\Software\NaruciISjedi\NaruciISjedi\obj\Debug\NaruciISjedi.exe
+C:\Users\Korisnik\source\repos\Projekt (1)\Projekt\Software\NaruciISjedi\NaruciISjedi\obj\Debug\NaruciISjedi.pdb
+C:\Users\Korisnik\source\repos\Projekt (1)\Projekt\Software\NaruciISjedi\NaruciISjedi\bin\Debug\NaruciISjedi.exe.config
+C:\Users\Korisnik\source\repos\Projekt (1)\Projekt\Software\NaruciISjedi\NaruciISjedi\bin\Debug\NaruciISjedi.exe
+C:\Users\Korisnik\source\repos\Projekt (1)\Projekt\Software\NaruciISjedi\NaruciISjedi\bin\Debug\NaruciISjedi.pdb
+C:\Users\Korisnik\source\repos\Projekt (1)\Projekt\Software\NaruciISjedi\NaruciISjedi\bin\Debug\EntityFramework.dll
+C:\Users\Korisnik\source\repos\Projekt (1)\Projekt\Software\NaruciISjedi\NaruciISjedi\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Korisnik\source\repos\Projekt (1)\Projekt\Software\NaruciISjedi\NaruciISjedi\bin\Debug\EntityFramework.xml
+C:\Users\Korisnik\source\repos\Projekt (1)\Projekt\Software\NaruciISjedi\NaruciISjedi\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Korisnik\source\repos\Projekt (1)\Projekt\Software\NaruciISjedi\NaruciISjedi\obj\Debug\NaruciISjedi.DodavanjeArtikalaForma.resources
+C:\Users\Korisnik\source\repos\Projekt (1)\Projekt\Software\NaruciISjedi\NaruciISjedi\obj\Debug\NaruciISjedi.csproj.CopyComplete
