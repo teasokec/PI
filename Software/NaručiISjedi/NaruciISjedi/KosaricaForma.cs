@@ -12,15 +12,15 @@ namespace NaruciISjedi
 {
     public partial class KosaricaForma : Form
     {
-        Product izabraniProizvod;
-        public KosaricaForma(Product proizvod)
+        Order izabraniProizvodi;
+        public KosaricaForma(Order proizvodi)
         {
             InitializeComponent();
-            proizvod = izabraniProizvod;
+            proizvodi = izabraniProizvodi;
         }
         private void KosaricaForma_Load(object sender, EventArgs e)
         {
-            kosaricaDataGridView.DataSource = izabraniProizvod;
+            kosaricaDataGridView.DataSource = izabraniProizvodi;
         }
 
     }

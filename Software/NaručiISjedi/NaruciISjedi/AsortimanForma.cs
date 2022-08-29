@@ -12,7 +12,7 @@ namespace NaruciISjedi
 {
     public partial class AsortimanForma : Form
     {
-        private Product izabraniProizvod;
+        private Order izabraniProizvodi;
         private User korisnik;
 
         public AsortimanForma(User user)
@@ -23,6 +23,7 @@ namespace NaruciISjedi
 
         private void AsortimanForma_Load(object sender, EventArgs e)
         {
+            OsvjeziPrikaz();
             if (korisnik.IDUloga == 4)
             {
                 OsvjeziPrikaz();
@@ -71,16 +72,11 @@ namespace NaruciISjedi
         private void kosaricaButton_Click(object sender, EventArgs e)
         {
 
-            KosaricaForma forma = new KosaricaForma(izabraniProizvod);
+            KosaricaForma forma = new KosaricaForma(izabraniProizvodi);
             this.Hide();
             forma.ShowDialog();
         }
         
-        public Product OdabraniProizvod()
-        {
-            izabraniProizvod = dgvProizvodi.CurrentRow.DataBoundItem as Product;
-            return izabraniProizvod;
-        }
 
         private void btnArtikl_Click(object sender, EventArgs e)
         {
