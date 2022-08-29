@@ -91,6 +91,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "IspisIzvjescaForma";
             this.Text = "IspisIzvjescaForma";
+            this.Load += new System.EventHandler(this.IspisIzvjescaForma_Load);
             this.ResumeLayout(false);
 
         }

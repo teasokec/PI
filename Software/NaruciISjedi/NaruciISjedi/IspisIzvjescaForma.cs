@@ -41,5 +41,10 @@ namespace NaruciISjedi
         {
 
         }
+
+        private void IspisIzvjescaForma_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

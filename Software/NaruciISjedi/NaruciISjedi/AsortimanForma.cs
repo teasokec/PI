@@ -23,28 +23,8 @@ namespace NaruciISjedi
 
         private void AsortimanForma_Load(object sender, EventArgs e)
         {
-            if (korisnik.IDUloga == 4)
-            {
-                OsvjeziPrikaz();
-                kreirajIzvjesceButton.Visible = false;
-                btnArtikl.Visible = false;
-                btnDodaj.Visible = false;
-                btnOdjava.Visible = false;
-            }
- 
-            else if (korisnik.IDUloga != 4)
-            {
-                OsvjeziPrikaz();
-                kreirajIzvjesceButton.Visible = true;
-                btnArtikl.Visible = true;
-                btnDodaj.Visible = true;
-                btnOdjava.Visible = true;
-            }
-            else
-            {
-                btnOdjava.Visible = true;
-            }
-        }
+            OsvjeziPrikaz();
+        }  
 
         private void OsvjeziPrikaz()
         {
@@ -70,10 +50,27 @@ namespace NaruciISjedi
 
         private void kosaricaButton_Click(object sender, EventArgs e)
         {
+            for (int i = 0; i < dgvProizvodi.RowCount; i++)
+            {
+                if (dgvProizvodi[1, i].Value.Equals(true))
+                {
+                    string kolicinaProizvoda = dgvProizvodi[0, i].Value.ToString();
+                    
+                    Order narudzba = new Order()
+                    {
+                        kolicina=int.Parse(kolicinaProizvoda),
 
-            KosaricaForma forma = new KosaricaForma(izabraniProizvod);
-            this.Hide();
-            forma.ShowDialog();
+
+
+                    };
+
+                    KosaricaForma forma = new KosaricaForma(narudzba);
+                    this.Hide();
+                    forma.ShowDialog();
+                }
+            }
+           
+
         }
         
         public Product OdabraniProizvod()
@@ -81,6 +78,7 @@ namespace NaruciISjedi
             izabraniProizvod = dgvProizvodi.CurrentRow.DataBoundItem as Product;
             return izabraniProizvod;
         }
+
 
         private void btnArtikl_Click(object sender, EventArgs e)
         {
@@ -93,7 +91,7 @@ namespace NaruciISjedi
 
         private void btnDodaj_Click(object sender, EventArgs e)
         {
-            DodavanjeArtiklaForma dodavanje = new DodavanjeArtiklaForma(korisnik);
+            DodavanjeArtikalaForma dodavanje = new DodavanjeArtikalaForma(korisnik);
             this.Hide();
             dodavanje.ShowDialog();
         }
