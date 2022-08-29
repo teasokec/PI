@@ -20,7 +20,13 @@ namespace NaruciISjedi
         }
         private void KosaricaForma_Load(object sender, EventArgs e)
         {
-            kosaricaDataGridView.DataSource = izabraniProizvodi;
+            using(var context = new PI2241_DBEntities1())
+            {
+                var query = from a in context.Orders
+                            select a;
+                kosaricaDataGridView.DataSource = query.ToList();
+            }
+            
         }
 
     }

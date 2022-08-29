@@ -36,6 +36,10 @@ namespace NaruciISjedi
         public void OdabraniPodatci()
         {
             string datum = datumTextBox.Text;
+            string[] datumPolje = datum.Split('.');
+            int dan = int.Parse(datumPolje[0]);
+            int mjesec = int.Parse(datumPolje[1]);
+            int godina = int.Parse(datumPolje[2]);
             string vremenskiPeriod = periodGroupBox.Text;
             
         }
