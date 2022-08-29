@@ -24,27 +24,7 @@ namespace NaruciISjedi
         private void AsortimanForma_Load(object sender, EventArgs e)
         {
             OsvjeziPrikaz();
-            if (korisnik.IDUloga == 4)
-            {
-                OsvjeziPrikaz();
-                kreirajIzvjesceButton.Visible = false;
-                btnArtikl.Visible = false;
-                btnDodaj.Visible = false;
-                btnOdjava.Visible = false;
-            }
- 
-            else if (korisnik.IDUloga != 4)
-            {
-                OsvjeziPrikaz();
-                kreirajIzvjesceButton.Visible = true;
-                btnArtikl.Visible = true;
-                btnDodaj.Visible = true;
-                btnOdjava.Visible = true;
-            }
-            else
-            {
-                btnOdjava.Visible = true;
-            }
+
         }
 
         private void OsvjeziPrikaz()
@@ -71,10 +51,22 @@ namespace NaruciISjedi
 
         private void kosaricaButton_Click(object sender, EventArgs e)
         {
+            for (int i = 0; i < dgvProizvodi.RowCount; i++)
+            {
 
-            KosaricaForma forma = new KosaricaForma(izabraniProizvodi);
-            this.Hide();
-            forma.ShowDialog();
+                if (dgvProizvodi[0, i].State > 0)
+                {
+                    string kolicinaProizvoda = dgvProizvodi[0, i].Value.ToString();
+                    Order narudzba = new Order
+                    {
+                        kolicina = int.Parse(kolicinaProizvoda),
+                    };
+
+                    KosaricaForma forma = new KosaricaForma(narudzba);
+                    this.Hide();
+                    forma.ShowDialog();
+                }
+        }
         }
         
 
