@@ -176,6 +176,7 @@
     <EmbeddedResource Include="DodavanjeArtiklaForma.resx">
       <DependentUpon>DodavanjeArtiklaForma.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GrafickiPrikaz.rdlc" />
     <EmbeddedResource Include="OrdersPrikazOsnovno.rdlc" />
     <EmbeddedResource Include="PocetnaForma.resx">
       <DependentUpon>PocetnaForma.cs</DependentUpon>

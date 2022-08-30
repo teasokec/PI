@@ -197,7 +197,7 @@
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>OrdersRep</DataSetName>
-        <Top>2.02353cm</Top>
+        <Top>2.9972cm</Top>
         <Left>0.66887cm</Left>
         <Height>2.6035cm</Height>
         <Width>11.69247cm</Width>
@@ -208,6 +208,18 @@
           </Border>
         </Style>
       </Tablix>
+      <Line Name="Line1">
+        <Top>1.68487cm</Top>
+        <Left>0.54187cm</Left>
+        <Height>0cm</Height>
+        <Width>15.13417cm</Width>
+        <ZIndex>2</ZIndex>
+        <Style>
+          <Border>
+            <Style>Solid</Style>
+          </Border>
+        </Style>
+      </Line>
     </ReportItems>
     <Height>3.53289in</Height>
     <Style />
