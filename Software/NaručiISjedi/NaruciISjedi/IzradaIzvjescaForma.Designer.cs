@@ -170,6 +170,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "IzradaIzvjescaForma";
             this.Text = "IzradaIzvjescaForma";
+            this.TopMost = true;
             this.Load += new System.EventHandler(this.IzradaIzvjescaForma_Load);
             this.periodGroupBox.ResumeLayout(false);
             this.periodGroupBox.PerformLayout();

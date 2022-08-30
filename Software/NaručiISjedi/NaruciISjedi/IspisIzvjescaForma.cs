@@ -41,5 +41,18 @@ namespace NaruciISjedi
         {
 
         }
+
+        private void IspisIzvjescaForma_Load(object sender, EventArgs e)
+        {
+            using(var context = new PI2241_DBEntities1())
+            {
+                var query = from a in context.Orders
+                            orderby a.kolicina descending
+                            select a;
+                List<Order> narudzbaLista = query.ToList();
+                orderBindingSource.DataSource = narudzbaLista;
+            }
+            this.reportViewer1.RefreshReport();
+        }
     }
 }
