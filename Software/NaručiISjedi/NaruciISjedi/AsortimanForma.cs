@@ -62,11 +62,12 @@ namespace NaruciISjedi
                         kolicina = int.Parse(kolicinaProizvoda),
                     };
 
-                    KosaricaForma forma = new KosaricaForma(narudzba);
-                    this.Hide();
-                    forma.ShowDialog();
+                    
                 }
-        }
+                KosaricaForma forma = new KosaricaForma();
+                this.Hide();
+                forma.ShowDialog();
+            }
         }
         
 

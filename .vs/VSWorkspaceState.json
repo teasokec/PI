@@ -1,7 +1,10 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Software",
+    "\\Software\\NaručiISjedi",
+    "\\Software\\NaručiISjedi\\NaruciISjedi"
   ],
-  "SelectedNode": "\\C:\\Users\\Korisnik\\Source\\Repos\\pi22-mkuzman1-dariasok-tsokec",
+  "SelectedNode": "\\Software\\NaručiISjedi\\NaruciISjedi\\DodavanjeArtiklaForma.cs",
   "PreviewInSolutionExplorer": false
 }

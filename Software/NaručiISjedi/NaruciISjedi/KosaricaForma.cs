@@ -12,11 +12,11 @@ namespace NaruciISjedi
 {
     public partial class KosaricaForma : Form
     {
-        Order izabraniProizvodi;
-        public KosaricaForma(Order proizvodi)
+        
+        public KosaricaForma()
         {
             InitializeComponent();
-            proizvodi = izabraniProizvodi;
+            
         }
         private void KosaricaForma_Load(object sender, EventArgs e)
         {
