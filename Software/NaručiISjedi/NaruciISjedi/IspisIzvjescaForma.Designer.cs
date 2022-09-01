@@ -29,15 +29,20 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource4 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            this.orderBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.vratiAsortimanButton = new System.Windows.Forms.Button();
             this.ispisiSlikovnoButton = new System.Windows.Forms.Button();
             this.ispisiIzvjesceButton = new System.Windows.Forms.Button();
             this.kreirajGrafButton = new System.Windows.Forms.Button();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.orderBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.reportViewer2 = new Microsoft.Reporting.WinForms.ReportViewer();
             ((System.ComponentModel.ISupportInitialize)(this.orderBindingSource)).BeginInit();
             this.SuspendLayout();
+            // 
+            // orderBindingSource
+            // 
+            this.orderBindingSource.DataSource = typeof(NaruciISjedi.Order);
             // 
             // vratiAsortimanButton
             // 
@@ -52,7 +57,7 @@
             // 
             // ispisiSlikovnoButton
             // 
-            this.ispisiSlikovnoButton.Location = new System.Drawing.Point(161, 389);
+            this.ispisiSlikovnoButton.Location = new System.Drawing.Point(248, 389);
             this.ispisiSlikovnoButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ispisiSlikovnoButton.Name = "ispisiSlikovnoButton";
             this.ispisiSlikovnoButton.Size = new System.Drawing.Size(112, 50);
@@ -63,7 +68,7 @@
             // 
             // ispisiIzvjesceButton
             // 
-            this.ispisiIzvjesceButton.Location = new System.Drawing.Point(290, 389);
+            this.ispisiIzvjesceButton.Location = new System.Drawing.Point(130, 389);
             this.ispisiIzvjesceButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ispisiIzvjesceButton.Name = "ispisiIzvjesceButton";
             this.ispisiIzvjesceButton.Size = new System.Drawing.Size(112, 50);
@@ -85,19 +90,24 @@
             // 
             // reportViewer1
             // 
-            reportDataSource1.Name = "OrdersRep";
-            reportDataSource1.Value = this.orderBindingSource;
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
+            reportDataSource4.Name = "OrdersRep";
+            reportDataSource4.Value = this.orderBindingSource;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource4);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "NaruciISjedi.OrdersPrikazOsnovno.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(12, 12);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(701, 372);
+            this.reportViewer1.Size = new System.Drawing.Size(390, 372);
             this.reportViewer1.TabIndex = 9;
             // 
-            // orderBindingSource
+            // reportViewer2
             // 
-            this.orderBindingSource.DataSource = typeof(NaruciISjedi.Order);
+            this.reportViewer2.LocalReport.ReportEmbeddedResource = "NaruciISjedi.GrafickiPrikaz.rdlc";
+            this.reportViewer2.Location = new System.Drawing.Point(408, 12);
+            this.reportViewer2.Name = "reportViewer2";
+            this.reportViewer2.ServerReport.BearerToken = null;
+            this.reportViewer2.Size = new System.Drawing.Size(304, 371);
+            this.reportViewer2.TabIndex = 10;
             // 
             // IspisIzvjescaForma
             // 
@@ -105,6 +115,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::NaruciISjedi.Properties.Resources._256x256bb;
             this.ClientSize = new System.Drawing.Size(725, 450);
+            this.Controls.Add(this.reportViewer2);
             this.Controls.Add(this.reportViewer1);
             this.Controls.Add(this.vratiAsortimanButton);
             this.Controls.Add(this.ispisiSlikovnoButton);
@@ -127,5 +138,6 @@
         private System.Windows.Forms.Button kreirajGrafButton;
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
         private System.Windows.Forms.BindingSource orderBindingSource;
+        private Microsoft.Reporting.WinForms.ReportViewer reportViewer2;
     }
 }

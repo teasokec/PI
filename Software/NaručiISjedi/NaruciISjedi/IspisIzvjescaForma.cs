@@ -22,12 +22,20 @@ namespace NaruciISjedi
 
         private void kreirajGrafButton_Click(object sender, EventArgs e)
         {
-
+            using (var context = new PI2241_DBEntities1())
+            {
+                var query = from a in context.Orders
+                            orderby a.kolicina descending
+                            select a;
+                List<Order> narudzbaLista = query.ToList();
+                orderBindingSource.DataSource = narudzbaLista;
+            }
+            this.reportViewer2.RefreshReport();
         }
 
         private void ispisiSlikovnoButton_Click(object sender, EventArgs e)
         {
-
+            
         }
 
         private void vratiAsortimanButton_Click(object sender, EventArgs e)
@@ -53,6 +61,7 @@ namespace NaruciISjedi
                 orderBindingSource.DataSource = narudzbaLista;
             }
             this.reportViewer1.RefreshReport();
+            
         }
     }
 }
