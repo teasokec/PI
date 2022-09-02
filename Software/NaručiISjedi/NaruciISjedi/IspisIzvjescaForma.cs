@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ceTe.DynamicPDF;
+using ceTe.DynamicPDF.PageElements;
 
 namespace NaruciISjedi
 {
@@ -30,7 +32,7 @@ namespace NaruciISjedi
                 List<Order> narudzbaLista = query.ToList();
                 orderBindingSource.DataSource = narudzbaLista;
             }
-            this.reportViewer2.RefreshReport();
+            this.reportViewer2.RefreshReport(); //iz nekog razloga ne prihvaća datasource
         }
 
         private void ispisiSlikovnoButton_Click(object sender, EventArgs e)
@@ -47,7 +49,10 @@ namespace NaruciISjedi
 
         private void ispisiIzvjesceButton_Click(object sender, EventArgs e)
         {
-
+            Document document = new Document();
+            Page page = new Page();
+            document.Pages.Add(page);
+            document.Draw("//Downloads"); //putanja je kriva
         }
 
         private void IspisIzvjescaForma_Load(object sender, EventArgs e)
@@ -60,7 +65,7 @@ namespace NaruciISjedi
                 List<Order> narudzbaLista = query.ToList();
                 orderBindingSource.DataSource = narudzbaLista;
             }
-            this.reportViewer1.RefreshReport();
+            this.reportViewer1.RefreshReport(); //hvata datasource i prikazuje izvješće
             
         }
     }
