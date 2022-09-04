@@ -37,7 +37,38 @@ namespace NaruciISjedi
 
         private void ispisiSlikovnoButton_Click(object sender, EventArgs e)
         {
+            List<Order> podatciZaIspis = DohvacanjePodataka();
+            Document document = new Document();
+            Page page = new Page();
+            document.Pages.Add(page);
+            ceTe.DynamicPDF.PageElements.Table2 table2 = new ceTe.DynamicPDF.PageElements.Table2(0, 140, 600, 600);
+            table2.Columns.Add(180);
+            table2.Columns.Add(60);
+            table2.Columns.Add(60);
+            table2.Columns.Add(80);
+            table2.Columns.Add(90);
+            ceTe.DynamicPDF.PageElements.Row2 row1 = table2.Rows.Add(35, ceTe.DynamicPDF.Font.HelveticaBold, 12, Grayscale.Black,
+           Grayscale.Gray);
+            foreach (var item in podatciZaIspis)
+            {
+                ceTe.DynamicPDF.PageElements.Row2 row2 = table2.Rows.Add(25, ceTe.DynamicPDF.Font.HelveticaBold, 12, Grayscale.Black,
+           Grayscale.Gray);
+                
+                row2.Cells.Add(item.Product.ToString());
+                row2.Cells.Add(item.kolicina.ToString());
+            }
+            if (document != null) 
+            {
+                document.Draw("C:\\Users\\Korisnik\\Desktop\\IzvjesceGraf.pdf");
+            }
+            else
+            {
+                int broj = 0;
+                broj++;
+                document.Draw("C:\\Users\\Korisnik\\Desktop\\IzvjesceGraf"+broj+".pdf");
+            }
             
+            string path = "C:\\Users\\Korisnik\\Desktop\\IzvjesceGraf.pdf";
         }
 
         private void vratiAsortimanButton_Click(object sender, EventArgs e)
@@ -69,8 +100,18 @@ namespace NaruciISjedi
                 row2.Cells.Add(item.Product.ToString());
                 row2.Cells.Add(item.kolicina.ToString());
             }
-            document.Draw("C:\\Users\\Korisnik\\Desktop\\Izvjesce.pdf");
-            string path = "C:\\Users\\Korisnik\\Desktop\\Izvjesce.pdf";
+            if (document != null)
+            {
+                document.Draw("C:\\Users\\Korisnik\\Desktop\\IzvjesceGraf.pdf");
+            }
+            else
+            {
+                int broj = 0;
+                broj++;
+                document.Draw("C:\\Users\\Korisnik\\Desktop\\IzvjesceGraf" + broj + ".pdf");
+            }
+
+            string path = "C:\\Users\\Korisnik\\Desktop\\IzvjesceGraf.pdf";
         }
 
         private void IspisIzvjescaForma_Load(object sender, EventArgs e)
