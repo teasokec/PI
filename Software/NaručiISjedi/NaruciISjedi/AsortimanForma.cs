@@ -24,7 +24,14 @@ namespace NaruciISjedi
         private void AsortimanForma_Load(object sender, EventArgs e)
         {
             OsvjeziPrikaz();
-
+            kolicnaComboBox.Items.Add(0);
+            kolicnaComboBox.Items.Add(1);
+            kolicnaComboBox.Items.Add(2);
+            kolicnaComboBox.Items.Add(3);
+            kolicnaComboBox.Items.Add(4);
+            kolicnaComboBox.Items.Add(5);
+            kolicnaComboBox.Items.Add(10);
+            kolicnaComboBox.Items.Add(20);
         }
 
         private void OsvjeziPrikaz()
@@ -39,6 +46,7 @@ namespace NaruciISjedi
                 dgvProizvodi.Columns["IDVrsta"].Visible = false;
                 dgvProizvodi.Columns["Orders"].Visible = false;
             }
+           
         }
 
         private void kreirajIzvjesceButton_Click(object sender, EventArgs e)
@@ -54,22 +62,29 @@ namespace NaruciISjedi
             for (int i = 0; i < dgvProizvodi.RowCount; i++)
             {
 
-                if (dgvProizvodi[0, i].State > 0)
+                if (dgvProizvodi[0, i].Value != null)
                 {
-                    string kolicinaProizvoda = dgvProizvodi[0, i].Value.ToString();
-                    Order narudzba = new Order
+                    using (var context = new PI2241_DBEntities1())
                     {
-                        kolicina = int.Parse(kolicinaProizvoda),
-                    };
+
+                        Order narudzba = new Order()
+                        {
+
+                            kolicina = int.Parse(dgvProizvodi[0, i].Value.ToString()),
+                            IDProizvod = int.Parse(dgvProizvodi[2, i].Value.ToString()),
+                            Product = (Product)dgvProizvodi.CurrentRow.Tag
+                        };
+                        context.Orders.Add(narudzba);
+                    }
 
                     
                 }
-                KosaricaForma forma = new KosaricaForma();
-                this.Hide();
-                forma.ShowDialog();
             }
+            KosaricaForma forma = new KosaricaForma();
+            this.Hide();
+            forma.ShowDialog();
         }
-        
+
 
         private void btnArtikl_Click(object sender, EventArgs e)
         {
@@ -94,5 +109,20 @@ namespace NaruciISjedi
             this.Hide();
             pocetnaForma.ShowDialog();
         }
+
+        private void kolicinaButton_Click(object sender, EventArgs e)
+        {
+            string kolicinaOrder = kolicnaComboBox.SelectedItem.ToString();
+            
+            using (var context = new PI2241_DBEntities1())
+            {
+                var query = from p in context.Products.Include("Orders").Include("Type")
+                            select new Product
+                            {
+                                Kolicina=int.Parse(kolicinaOrder)
+                            };
+            }
+        }
     }
 }
+

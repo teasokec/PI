@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource4 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.orderBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.vratiAsortimanButton = new System.Windows.Forms.Button();
             this.ispisiSlikovnoButton = new System.Windows.Forms.Button();
@@ -90,23 +90,23 @@
             // 
             // reportViewer1
             // 
-            reportDataSource4.Name = "OrdersRep";
-            reportDataSource4.Value = this.orderBindingSource;
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource4);
+            reportDataSource1.Name = "OrdersRep";
+            reportDataSource1.Value = this.orderBindingSource;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "NaruciISjedi.OrdersPrikazOsnovno.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(12, 12);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(390, 372);
+            this.reportViewer1.Size = new System.Drawing.Size(490, 372);
             this.reportViewer1.TabIndex = 9;
             // 
             // reportViewer2
             // 
             this.reportViewer2.LocalReport.ReportEmbeddedResource = "NaruciISjedi.GrafickiPrikaz.rdlc";
-            this.reportViewer2.Location = new System.Drawing.Point(408, 12);
+            this.reportViewer2.Location = new System.Drawing.Point(508, 12);
             this.reportViewer2.Name = "reportViewer2";
             this.reportViewer2.ServerReport.BearerToken = null;
-            this.reportViewer2.Size = new System.Drawing.Size(304, 371);
+            this.reportViewer2.Size = new System.Drawing.Size(472, 371);
             this.reportViewer2.TabIndex = 10;
             // 
             // IspisIzvjescaForma
@@ -114,7 +114,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::NaruciISjedi.Properties.Resources._256x256bb;
-            this.ClientSize = new System.Drawing.Size(725, 450);
+            this.ClientSize = new System.Drawing.Size(1041, 450);
             this.Controls.Add(this.reportViewer2);
             this.Controls.Add(this.reportViewer1);
             this.Controls.Add(this.vratiAsortimanButton);

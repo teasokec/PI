@@ -42,22 +42,22 @@ namespace NaruciISjedi
             int godina = int.Parse(datumPolje[2]);
             string vremenskiPeriod = periodGroupBox.Text;
             
-            using(var context = new PI2241_DBEntities1())
-            {
-                var query = from a in context.Orders
-                            where a.vrijemeDostave.ToString() == datum && a.vrijemeDostave.ToString() == vremenskiPeriod
-                            select a;
-            }
+           
+
         }
 
         private void IzradaIzvjescaForma_Load(object sender, EventArgs e)
         {
-            using (var context =new PI2241_DBEntities1())
+            IspisNarudzbi();
+        }
+        private void IspisNarudzbi()
+        {
+            using (var context = new PI2241_DBEntities1())
             {
                 var query = from a in context.Orders
                             select a;
                 narudzbeDataGridView.DataSource = query.ToList();
-            }
-        }
+             }
+    }
     }
 }

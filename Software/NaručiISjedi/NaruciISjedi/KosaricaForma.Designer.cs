@@ -34,8 +34,6 @@
             this.kosaricaDataGridView = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.cijenaTextBox = new System.Windows.Forms.TextBox();
-            this.kolTextBox = new System.Windows.Forms.TextBox();
-            this.kolButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.kosaricaDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -87,30 +85,12 @@
             this.cijenaTextBox.Size = new System.Drawing.Size(100, 22);
             this.cijenaTextBox.TabIndex = 10;
             // 
-            // kolTextBox
-            // 
-            this.kolTextBox.Location = new System.Drawing.Point(483, 47);
-            this.kolTextBox.Name = "kolTextBox";
-            this.kolTextBox.Size = new System.Drawing.Size(100, 22);
-            this.kolTextBox.TabIndex = 11;
-            // 
-            // kolButton
-            // 
-            this.kolButton.Location = new System.Drawing.Point(611, 46);
-            this.kolButton.Name = "kolButton";
-            this.kolButton.Size = new System.Drawing.Size(75, 23);
-            this.kolButton.TabIndex = 12;
-            this.kolButton.Text = "Količina";
-            this.kolButton.UseVisualStyleBackColor = true;
-            // 
             // KosaricaForma
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::NaruciISjedi.Properties.Resources._256x256bb;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.kolButton);
-            this.Controls.Add(this.kolTextBox);
             this.Controls.Add(this.cijenaTextBox);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.kosaricaDataGridView);
@@ -134,7 +114,5 @@
         private System.Windows.Forms.DataGridView kosaricaDataGridView;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox cijenaTextBox;
-        private System.Windows.Forms.TextBox kolTextBox;
-        private System.Windows.Forms.Button kolButton;
     }
 }
