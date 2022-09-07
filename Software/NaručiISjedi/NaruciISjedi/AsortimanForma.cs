@@ -12,7 +12,7 @@ namespace NaruciISjedi
 {
     public partial class AsortimanForma : Form
     {
-        private Order izabraniProizvodi;
+        private Order narudzba;
         private User korisnik;
 
         public AsortimanForma(User user)
@@ -80,7 +80,7 @@ namespace NaruciISjedi
                     
                 }
             }
-            KosaricaForma forma = new KosaricaForma();
+            KosaricaForma forma = new KosaricaForma(narudzba);
             this.Hide();
             forma.ShowDialog();
         }

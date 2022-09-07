@@ -127,6 +127,7 @@ namespace NaruciISjedi
             using (var context = new PI2241_DBEntities1())
             {
                 var query = from a in context.Orders
+                            
                             orderby a.kolicina descending
                             select a;
                 return narudzbaLista = query.ToList();

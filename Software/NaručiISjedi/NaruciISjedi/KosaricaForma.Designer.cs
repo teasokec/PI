@@ -46,6 +46,7 @@
             this.potvrdaNarudzbeButton.TabIndex = 7;
             this.potvrdaNarudzbeButton.Text = "Potvrda narudžbe";
             this.potvrdaNarudzbeButton.UseVisualStyleBackColor = true;
+            this.potvrdaNarudzbeButton.Click += new System.EventHandler(this.potvrdaNarudzbeButton_Click);
             // 
             // vratiAsortimanButton
             // 
@@ -56,6 +57,7 @@
             this.vratiAsortimanButton.TabIndex = 6;
             this.vratiAsortimanButton.Text = "Vrati se na pregled asortimana";
             this.vratiAsortimanButton.UseVisualStyleBackColor = true;
+            this.vratiAsortimanButton.Click += new System.EventHandler(this.vratiAsortimanButton_Click);
             // 
             // kosaricaDataGridView
             // 
